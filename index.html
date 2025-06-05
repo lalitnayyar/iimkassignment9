@@ -5,6 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IIMK Assignment 9.1 Submission</title>
   <style>
+.viz-code-flex {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em 0;
+  flex-wrap: wrap;
+}
+.viz-code-block, .viz-img-block {
+  background: #e3f2fd;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #1976d230;
+  padding: 1em 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 320px;
+  max-width: 500px;
+  flex: 1 1 350px;
+}
+.viz-img {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #90caf9;
+  border-radius: 12px;
+  margin: 0 auto 1em auto;
+  box-shadow: 0 2px 12px #1976d230;
+  background: #fff;
+}
+.viz-caption {
+  text-align: center;
+  color: #1565c0;
+  font-size: 1.05em;
+  margin-top: 0.25em;
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .viz-code-flex {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .viz-code-block, .viz-img-block {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+  }
+}
+
 /* Responsive Table Styles */
 table {
   width: 100%;
@@ -1677,8 +1725,9 @@ Engineering 🔍</h2>
 correlation analysis, focusing on: 1. Correlation between numerical
 features 2. Identifying potential multicollinearity 3. Feature
 importance relative to our target variable (income)</p>
-<div class="sourceCode" id="cb22"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix for numerical features</span></span>
+<div class="viz-code-flex">
+  <div class="viz-code-block">
+    <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix for numerical features</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>numerical_columns <span class="op">=</span> df.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;int64&#39;</span>, <span class="st">&#39;float64&#39;</span>]).columns</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> df[numerical_columns].corr()</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1688,12 +1737,16 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a h
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Correlation Heatmap of Numerical Features&#39;</span>)</span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<figure>
-<img
-src="lalitnayyar_assignment9_md_files/lalitnayyar_assignment9_md_13_0.png"
-alt="png" />
-<figcaption aria-hidden="true">png</figcaption>
-</figure>
+  </div>
+  <div class="viz-img-block">
+    <!-- EMBEDDED IMAGE: lalitnayyar_assignment9_md_13_0.png -->
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
+AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
+AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
+AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" class="viz-img" />
+    <div class="viz-caption">Figure: Correlation Heatmap of Numerical Features</div>
+  </div>
+</div>
 <h3 id="b.-feature-engineering">3.b. Feature Engineering</h3>
 <p>Based on our analysis and domain knowledge, we’ll create new features
 that might enhance model performance: 1. Age groups (binning age into
