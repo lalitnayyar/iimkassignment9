@@ -5,7 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IIMK Assignment 9.1 Submission</title>
   <style>
-.viz-code-flex {
+.notebook-code-editor pre, .notebook-code-editor code {
+  background: #e3eafc !important;
+  color: #21243b !important;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace !important;
+  font-size: 1.07em;
+  padding: 1.1em 1.3em !important;
+  border-radius: 9px !important;
+  box-shadow: none !important;
+  text-align: left !important;
+  margin: 0 !important;
+  line-height: 1.6;
+  border-left: 5px solid #1976d2;
+  border: none;
+}
+.notebook-code-editor {
+  margin: 0 0 1.5em 0;
+}
+.viz-img {
+  display: block;
+  margin: 1.5em auto 0.5em auto;
+  max-width: 100%;
+  border-radius: 12px;
+  border: 3px solid #90caf9;
+  box-shadow: 0 2px 12px #1976d230;
+  background: #fff;
+}
+.viz-caption {
+  text-align: center;
+  color: #1565c0;
+  font-size: 1.05em;
+  margin-top: 0.25em;
+  font-style: italic;
+}
+@media (max-width: 900px) {
+  .viz-code-flex {
+    flex-direction: column;
+    gap: 1em;
+  }
+  .notebook-code-editor, .viz-img-block {
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+  }
+}
+
   display: flex;
   align-items: stretch;
   justify-content: center;
@@ -1724,107 +1768,112 @@ Engineering 🔍</h2>
 correlation analysis, focusing on: 1. Correlation between numerical
 features 2. Identifying potential multicollinearity 3. Feature
 importance relative to our target variable (income)</p>
-<div class="viz-code-flex">
-  <div class="viz-code-block notebook-code-editor">
-  <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix for numerical features</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>numerical_columns <span class="op">=</span> df.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;int64&#39;</span>, <span class="st">&#39;float64&#39;</span>]).columns</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> df[numerical_columns].corr()</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create correlation heatmap</span></span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>sns.heatmap(correlation_matrix, annot<span class="op">=</span><span class="va">True</span>, cmap<span class="op">=</span><span class="st">&#39;coolwarm&#39;</span>, center<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Correlation Heatmap of Numerical Features&#39;</span>)</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="notebook-code-editor">
+<pre><code class="sourceCode python"># Calculate correlation matrix for numerical features
+numerical_columns = df.select_dtypes(include=['int64', 'float64']).columns
+correlation_matrix = df[numerical_columns].corr()
+
+# Create correlation heatmap
+plt.figure(figsize=(12, 8))
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
+plt.title('Correlation Heatmap of Numerical Features')
+plt.tight_layout()
+plt.show()
+</code></pre>
 </div>
-  <div class="viz-img-block">
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
+<div class="viz-img-block">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
 AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
 AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
 AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Correlation Heatmap of Numerical Features" class="viz-img" />
-<div class="viz-caption">Figure: Correlation Heatmap of Numerical Features</div>
-  </div>
+  <div class="viz-caption">Figure: Correlation Heatmap of Numerical Features</div>
 </div>
 <h3 id="b.-feature-engineering">3.b. Feature Engineering</h3>
 <p>Based on our analysis and domain knowledge, we’ll create new features
 that might enhance model performance: 1. Age groups (binning age into
 meaningful categories) 2. Income-related ratios 3. Work-life balance
 indicators</p>
-<div class="sourceCode" id="cb23"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create age groups</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;age_group&#39;</span>] <span class="op">=</span> pd.cut(df[<span class="st">&#39;age&#39;</span>], </span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>                        bins<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">25</span>, <span class="dv">35</span>, <span class="dv">45</span>, <span class="dv">55</span>, <span class="dv">65</span>, <span class="dv">100</span>],</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>                        labels<span class="op">=</span>[<span class="st">&#39;Young&#39;</span>, <span class="st">&#39;Early-Career&#39;</span>, <span class="st">&#39;Mid-Career&#39;</span>, <span class="st">&#39;Late-Career&#39;</span>, <span class="st">&#39;Pre-Retirement&#39;</span>, <span class="st">&#39;Retirement&#39;</span>])</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create work-life balance indicator</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;work_intensity&#39;</span>] <span class="op">=</span> df[<span class="st">&#39;hours-per-week&#39;</span>].<span class="bu">apply</span>(<span class="kw">lambda</span> x: <span class="st">&#39;High&#39;</span> <span class="cf">if</span> x <span class="op">&gt;</span> <span class="dv">40</span> <span class="cf">else</span> <span class="st">&#39;Normal&#39;</span> <span class="cf">if</span> x <span class="op">&gt;=</span> <span class="dv">35</span> <span class="cf">else</span> <span class="st">&#39;Part-time&#39;</span>)</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create capital utilization ratio</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>df[<span class="st">&#39;capital_utilization&#39;</span>] <span class="op">=</span> (df[<span class="st">&#39;capital-gain&#39;</span>] <span class="op">-</span> df[<span class="st">&#39;capital-loss&#39;</span>]) <span class="op">/</span> (df[<span class="st">&#39;capital-gain&#39;</span>] <span class="op">+</span> df[<span class="st">&#39;capital-loss&#39;</span>] <span class="op">+</span> <span class="dv">1</span>)</span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># One-hot encode the new categorical features</span></span>
-<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.get_dummies(df, columns<span class="op">=</span>[<span class="st">&#39;age_group&#39;</span>, <span class="st">&#39;work_intensity&#39;</span>])</span>
-<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Final dataset shape:&quot;</span>, df.shape)</span>
-<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">New features:&quot;</span>)</span>
-<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>new_features <span class="op">=</span> [col <span class="cf">for</span> col <span class="kw">in</span> df.columns <span class="cf">if</span> col.startswith((<span class="st">&#39;age_group_&#39;</span>, <span class="st">&#39;work_intensity_&#39;</span>, <span class="st">&#39;capital_utilization&#39;</span>))]</span>
-<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(new_features)</span></code></pre></div>
+<div class="notebook-code-editor">
+<pre><code class="sourceCode python"># Create age groups
+df['age_group'] = pd.cut(df['age'], 
+                        bins=[0, 25, 35, 45, 55, 65, 100], 
+                        labels=['Young', 'Early-Career', 'Mid-Career', 'Late-Career', 'Pre-Retirement', 'Retirement'])
+
+# Create work-life balance indicator
+df['work_intensity'] = df['hours-per-week'].apply(lambda x: 'High' if x > 40 else 'Normal' if x >= 35 else 'Part-time')
+
+# Create capital utilization ratio
+df['capital_utilization'] = (df['capital-gain'] - df['capital-loss']) / (df['capital-gain'] + df['capital-loss'] + 1)
+
+# One-hot encode the new categorical features
+df = pd.get_dummies(df, columns=['age_group', 'work_intensity'])
+</code></pre>
+</div>
 <pre><code>Final dataset shape: (32561, 101)
 
 New features:
-[&#39;capital_utilization&#39;, &#39;age_group_Young&#39;, &#39;age_group_Early-Career&#39;, &#39;age_group_Mid-Career&#39;, &#39;age_group_Late-Career&#39;, &#39;age_group_Pre-Retirement&#39;, &#39;age_group_Retirement&#39;, &#39;work_intensity_High&#39;, &#39;work_intensity_Normal&#39;, &#39;work_intensity_Part-time&#39;]</code></pre>
-<div class="sourceCode" id="cb25"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import our feature engineering module</span></span>
-<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> feature_engineering <span class="im">import</span> (</span>
-<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    create_age_groups, </span>
-<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    create_income_ratios, </span>
-<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    create_work_life_indicators, </span>
-<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    plot_feature_distributions</span>
-<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply feature engineering transformations</span></span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Creating new features...&quot;</span>)</span>
-<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> create_age_groups(df)</span>
-<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> create_income_ratios(df)</span>
-<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> create_work_life_indicators(df)</span></code></pre></div>
+['capital_utilization', 'age_group_Young', 'age_group_Early-Career', 'age_group_Mid-Career', 'age_group_Late-Career', 'age_group_Pre-Retirement', 'age_group_Retirement', 'work_intensity_High', 'work_intensity_Normal', 'work_intensity_Part-time']
+</code></pre>
+<div class="notebook-code-editor">
+<pre><code class="sourceCode python"># Import our feature engineering module
+from feature_engineering import (
+    create_age_groups, 
+    create_income_ratios, 
+    create_work_life_indicators, 
+    plot_feature_distributions
+)
+
+# Apply feature engineering transformations
+print("Creating new features...")
+df = create_age_groups(df)
+df = create_income_ratios(df)
+df = create_work_life_indicators(df)
+</code></pre>
+</div>
 <pre><code>Creating new features...</code></pre>
-<div class="sourceCode" id="cb27"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Display information about new features</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">New features added:&quot;</span>)</span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Age Groups:&quot;</span>, df[<span class="st">&#39;age_group&#39;</span>].unique())</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Work-Life Balance Indicators:&quot;</span>)</span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> col <span class="kw">in</span> [<span class="st">&#39;standard_work_week&#39;</span>, <span class="st">&#39;overwork&#39;</span>, <span class="st">&#39;part_time&#39;</span>]:</span>
-<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> df[col].<span class="bu">sum</span>()</span>
-<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>    percentage <span class="op">=</span> (count <span class="op">/</span> <span class="bu">len</span>(df)) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;- </span><span class="sc">{</span>col<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">:,}</span><span class="ss"> instances (</span><span class="sc">{</span>percentage<span class="sc">:.1f}</span><span class="ss">%)&quot;</span>)</span>
-<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
+<div class="notebook-code-editor">
+<pre><code class="sourceCode python"># Display information about new features
+print("\nNew features added:")
+print("Age Groups:", df['age_group'].unique())
+print("\nWork-Life Balance Indicators:")
+for col in ['standard_work_week', 'overwork', 'part_time']:
+    count = df[col].sum()
+    percentage = (count / len(df)) * 100
+    print(f"- {col}: {count:,} instances ({percentage:.1f}%)")
+</code></pre>
+</div>
 <pre><code>New features added:
-Age Groups: [&#39;36-45&#39;, &#39;46-55&#39;, &#39;26-35&#39;, &#39;18-25&#39;, &#39;56-65&#39;, &#39;65+&#39;]
-Categories (6, object): [&#39;18-25&#39; &lt; &#39;26-35&#39; &lt; &#39;36-45&#39; &lt; &#39;46-55&#39; &lt; &#39;56-65&#39; &lt; &#39;65+&#39;]
+Age Groups: ['36-45', '46-55', '26-35', '18-25', '56-65', '65+']
+Categories (6, object): ['18-25' &lt; '26-35' &lt; '36-45' &lt; '46-55' &lt; '56-65' &lt; '65+']
 
 Work-Life Balance Indicators:
 - standard_work_week: 15,217 instances (46.7%)
 - overwork: 7,139 instances (21.9%)
-- part_time: 5,583 instances (17.1%)</code></pre>
-<div class="sourceCode" id="cb29"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize the distributions</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>, <span class="dv">10</span>))</span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> plot_feature_distributions(df)</span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
-<pre><code>&lt;Figure size 1500x1000 with 0 Axes&gt;</code></pre>
-<figure>
-<!-- EMBEDDED IMAGE: lalitnayyar_assignment9_md_18_1.png -->
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
+- part_time: 5,583 instances (17.1%)
+</code></pre>
+<div class="viz-img-block">
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
 AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
 AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
-AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" style="display:block;margin:2em auto;max-width:100%;border:3px solid #90caf9;border-radius:12px;box-shadow:0 2px 12px #1976d230;" />
-<figcaption aria-hidden="true">png</figcaption>
-</figure>
-<div class="sourceCode" id="cb31"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Brief analysis of engineered features</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Feature Analysis:&quot;</span>)</span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;1. Age Distribution:&quot;</span>)</span>
+AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" class="viz-img" />
+  <div class="viz-caption">Figure: Feature Distributions</div>
+</div>
+<div class="notebook-code-editor">
+<pre><code class="sourceCode python"># Brief analysis of engineered features
+print("\nFeature Analysis:")
+print("1. Age Distribution:")
+age_income = pd.crosstab(df['age_group'], df['income'], normalize='index') * 100
+print(age_income.round(2))
+
+print("\n2. Work Pattern Analysis:")
+work_income = pd.DataFrame({
+    'Standard Work Week': df[df['standard_work_week'] == 1]['income'].value_counts(normalize=True),
+    'Overwork': df[df['overwork'] == 1]['income'].value_counts(normalize=True),
+    'Part Time': df[df['part_time'] == 1]['income'].value_counts(normalize=True)
+}) * 100
+print(work_income.round(2))
+</code></pre>
+</div>
 <span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>age_income <span class="op">=</span> pd.crosstab(df[<span class="st">&#39;age_group&#39;</span>], df[<span class="st">&#39;income&#39;</span>], normalize<span class="op">=</span><span class="st">&#39;index&#39;</span>) <span class="op">*</span> <span class="dv">100</span></span>
 <span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_income.<span class="bu">round</span>(<span class="dv">2</span>))</span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
