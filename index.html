@@ -693,21 +693,20 @@ an individual’s annual income exceeds $50,000. This real-world dataset
 presents various data preprocessing and modeling challenges that are
 common in practical machine learning applications.</p>
 <div class="sourceCode" id="cb11"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import necessary libraries</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure visualization settings</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;default&#39;</span>)  <span class="co"># Use default matplotlib style</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>sns.set_theme()  <span class="co"># Set seaborn theme</span></span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre></div>
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> pandas <span class="kw">as</span> pd</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> numpy <span class="kw">as</span> np</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> seaborn <span class="kw">as</span> sns</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> sklearn.preprocessing <span class="kw">import</span> LabelEncoder</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> train_test_split</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set random seed for reproducibility</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure visualization settings</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;default&#39;</span>)  <span class="co"># Use default matplotlib style</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>sns.set_theme()  <span class="co"># Set seaborn theme</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre></div>
 <h2 id="data-preprocessing-1">1. Data Preprocessing 🔄</h2>
 <h3 id="a.-loading-the-dataset">1.a. Loading the Dataset</h3>
 <p>We begin by loading the Adult Income dataset. This dataset contains
@@ -1726,8 +1725,8 @@ correlation analysis, focusing on: 1. Correlation between numerical
 features 2. Identifying potential multicollinearity 3. Feature
 importance relative to our target variable (income)</p>
 <div class="viz-code-flex">
-  <div class="viz-code-block">
-    <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix for numerical features</span></span>
+  <div class="viz-code-block notebook-code-editor">
+  <div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate correlation matrix for numerical features</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>numerical_columns <span class="op">=</span> df.select_dtypes(include<span class="op">=</span>[<span class="st">&#39;int64&#39;</span>, <span class="st">&#39;float64&#39;</span>]).columns</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>correlation_matrix <span class="op">=</span> df[numerical_columns].corr()</span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -1737,14 +1736,13 @@ importance relative to our target variable (income)</p>
 <span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Correlation Heatmap of Numerical Features&#39;</span>)</span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-  </div>
+</div>
   <div class="viz-img-block">
-    <!-- EMBEDDED IMAGE: lalitnayyar_assignment9_md_13_0.png -->
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
 AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
 AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
-AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" class="viz-img" />
-    <div class="viz-caption">Figure: Correlation Heatmap of Numerical Features</div>
+AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Correlation Heatmap of Numerical Features" class="viz-img" />
+<div class="viz-caption">Figure: Correlation Heatmap of Numerical Features</div>
   </div>
 </div>
 <h3 id="b.-feature-engineering">3.b. Feature Engineering</h3>
