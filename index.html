@@ -5,6 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IIMK Assignment 9.1 Submission</title>
   <style>
+/* Responsive Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  background: #f7fbff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px #1976d220;
+}
+thead, th {
+  background: linear-gradient(90deg, #1976d2 60%, #90caf9 100%);
+  color: #fff;
+  font-weight: 600;
+}
+td, th {
+  padding: 0.75em 1em;
+  border: 1px solid #e3eaf3;
+  text-align: left;
+  font-size: 1em;
+}
+tbody tr:nth-child(even) {
+  background: #e3f2fd;
+}
+tbody tr:hover {
+  background: #bbdefb;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+}
+@media (max-width: 900px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    margin-bottom: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #1976d220;
+    background: #f7fbff;
+  }
+  td {
+    border: none;
+    border-bottom: 1px solid #e3eaf3;
+    position: relative;
+    padding-left: 50%;
+    min-height: 2.5em;
+    white-space: pre-line;
+  }
+  td:before {
+    position: absolute;
+    top: 0;
+    left: 1em;
+    width: 45%;
+    padding-right: 1em;
+    white-space: pre-line;
+    font-weight: bold;
+    color: #1976d2;
+    content: attr(data-label);
+  }
+}
+/* Code and Image Block Enhancements */
+pre, code {
+  background: #e3f2fd;
+  color: #263238;
+  border-radius: 8px;
+  font-size: 1em;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px #1976d220;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2em auto;
+}
+
     body {
       font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
       background: linear-gradient(135deg, #e3f0ff 0%, #b3d8ff 100%);
@@ -1678,9 +1763,11 @@ class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a h
 <span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a></span></code></pre></div>
 <pre><code>&lt;Figure size 1500x1000 with 0 Axes&gt;</code></pre>
 <figure>
-<img
-src="lalitnayyar_assignment9_md_files/lalitnayyar_assignment9_md_18_1.png"
-alt="png" />
+<!-- EMBEDDED IMAGE: lalitnayyar_assignment9_md_18_1.png -->
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
+AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
+AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
+AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" style="display:block;margin:2em auto;max-width:100%;border:3px solid #90caf9;border-radius:12px;box-shadow:0 2px 12px #1976d230;" />
 <figcaption aria-hidden="true">png</figcaption>
 </figure>
 <div class="sourceCode" id="cb31"><pre
