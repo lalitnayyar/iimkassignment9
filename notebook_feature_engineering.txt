@@ -1,0 +1,57 @@
+# 3. Feature Engineering 🛠️
+
+In this section, we'll create advanced features to improve our model's performance:
+
+1. Age Groups: Categorize ages into meaningful bins
+2. Income-related Ratios: Create normalized ratios from financial features
+3. Work-Life Balance Indicators: Derive insights from working hours
+
+## 3.1 Implementing Feature Engineering
+
+```python
+# Import our feature engineering module
+from feature_engineering import (
+    create_age_groups, 
+    create_income_ratios, 
+    create_work_life_indicators, 
+    plot_feature_distributions
+)
+
+# Apply feature engineering transformations
+print("Creating new features...")
+df = create_age_groups(df)
+df = create_income_ratios(df)
+df = create_work_life_indicators(df)
+
+# Display information about new features
+print("\nNew features added:")
+print("Age Groups:", df['age_group'].unique())
+print("\nWork-Life Balance Indicators:")
+for col in ['standard_work_week', 'overwork', 'part_time']:
+    count = df[col].sum()
+    percentage = (count / len(df)) * 100
+    print(f"- {col}: {count:,} instances ({percentage:.1f}%)")
+
+# Visualize the distributions
+plt.figure(figsize=(15, 10))
+fig = plot_feature_distributions(df)
+plt.show()
+
+# Brief analysis of engineered features
+print("\nFeature Analysis:")
+print("1. Age Distribution:")
+age_income = pd.crosstab(df['age_group'], df['income'], normalize='index') * 100
+print(age_income.round(2))
+
+print("\n2. Work Pattern Analysis:")
+work_income = pd.DataFrame({
+    'Standard Work Week': df[df['standard_work_week'] == 1]['income'].value_counts(normalize=True),
+    'Overwork': df[df['overwork'] == 1]['income'].value_counts(normalize=True),
+    'Part Time': df[df['part_time'] == 1]['income'].value_counts(normalize=True)
+}) * 100
+print(work_income.round(2))
+
+# Save engineered features
+print("\nSaving dataset with new features...")
+df.to_csv('data/adult_with_features.csv', index=False)
+print("Features saved successfully!")

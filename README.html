@@ -1,0 +1,417 @@
+
+<html>
+<head>
+<style>
+body { font-family: Arial, sans-serif; margin: 40px; }
+h1 { color: #2c3e50; }
+h2 { color: #34495e; }
+code { background-color: #f7f9fa; padding: 2px 5px; border-radius: 3px; }
+pre { background-color: #f7f9fa; padding: 15px; border-radius: 5px; }
+</style>
+</head>
+<body>
+<h1>🎓 IIMK Professional Certificate in Data Science and AI for Managers</h1>
+<h2>📊 Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
+<h3>👨‍🎓 Student Information:</h3>
+<ul>
+<li><strong>Name:</strong> Lalit Nayyar</li>
+<li><strong>Email:</strong> lalitnayyar@gmail.com</li>
+<li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
+<li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
+<li><strong>Submission Date:</strong> June 5, 2025</li>
+</ul>
+<h2>🌟 Assignment Overview</h2>
+<p>This project showcases advanced machine learning techniques for income prediction using the Adult Income Dataset. The implementation focuses on sophisticated feature engineering, model development, and comprehensive analysis.</p>
+<h3>🎯 Key Objectives</h3>
+<ol>
+<li>🔍 Implement advanced feature engineering techniques</li>
+<li>📊 Develop robust classification models</li>
+<li>📈 Analyze model performance with multiple metrics</li>
+<li>📝 Create a professional data science report</li>
+</ol>
+<h2>📋 Assignment Overview</h2>
+<p>🔍 This project implements supervised learning techniques to predict income levels using the Adult Income Dataset. The assignment focuses on understanding classification models, their performance metrics, and data preprocessing techniques.</p>
+<h3>🎯 Learning Objectives</h3>
+<ol>
+<li>📚 Detail the Supervised Learning process</li>
+<li>📈 Evaluate classifiers based on specific performance metrics</li>
+<li>🤖 Perform comprehensive data preprocessing and feature engineering</li>
+<li>📊 Create a professional data science report</li>
+</ol>
+<h2>📖 User Guide</h2>
+<h3>🚀 Quick Start</h3>
+<ol>
+<li>
+<p><strong>Environment Setup</strong>
+<code>bash
+python -m venv venv
+.\venv\Scripts\activate  # Windows
+pip install -r requirements.txt</code></p>
+</li>
+<li>
+<p><strong>Launch Notebook</strong>
+<code>bash
+jupyter notebook lalitnayyar_assignment9.ipynb</code></p>
+</li>
+</ol>
+<h3>📓 Notebook Navigation</h3>
+<ol>
+<li>📥 <strong>Data Loading &amp; Exploration</strong></li>
+<li>Dataset overview</li>
+<li>Initial statistics</li>
+<li>
+<p>Data quality checks</p>
+</li>
+<li>
+<p>⚡ <strong>Feature Engineering</strong></p>
+</li>
+<li>Age grouping</li>
+<li>Income ratios calculation</li>
+<li>Work-life balance indicators</li>
+<li>
+<p>Feature distribution analysis</p>
+</li>
+<li>
+<p>🤖 <strong>Model Development</strong></p>
+</li>
+<li>Data preprocessing</li>
+<li>Model training</li>
+<li>
+<p>Performance evaluation</p>
+</li>
+<li>
+<p>📊 <strong>Results &amp; Analysis</strong></p>
+</li>
+<li>Visualization of results</li>
+<li>Performance metrics</li>
+<li>Feature importance analysis</li>
+</ol>
+<h2>📁 Project Structure &amp; Code Organization</h2>
+<h3>📌 Core Files</h3>
+<ul>
+<li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission notebook</li>
+<li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering module</li>
+<li>📊 <code>data_loader.py</code>: Data handling utilities</li>
+<li>📝 <code>requirements.txt</code>: Project dependencies</li>
+<li>📘 <code>README.md</code>: Project documentation</li>
+</ul>
+<h3>🔧 Supporting Modules</h3>
+<ol>
+<li><strong>Feature Engineering Module</strong> (<code>feature_engineering.py</code>)</li>
+<li><code>create_age_groups()</code>: Age categorization</li>
+<li><code>create_income_ratios()</code>: Financial feature creation</li>
+<li><code>create_work_life_indicators()</code>: Work pattern analysis</li>
+<li>
+<p><code>plot_feature_distributions()</code>: Visualization functions</p>
+</li>
+<li>
+<p><strong>Data Loading Module</strong> (<code>data_loader.py</code>)</p>
+</li>
+<li>Dataset download functionality</li>
+<li>Initial preprocessing</li>
+<li>Data validation checks</li>
+</ol>
+<h3>Core Files</h3>
+<ul>
+<li>📓 <code>submission_notebook.ipynb</code>: Main Jupyter notebook containing the complete analysis and report</li>
+<li>📝 <code>requirements.txt</code>: List of Python dependencies</li>
+<li>📘 <code>README.md</code>: Project documentation</li>
+</ul>
+<h3>Notebook Sections</h3>
+<ol>
+<li><strong>Data Preprocessing</strong> 🔄</li>
+<li>Dataset loading and initial exploration</li>
+<li>Missing value analysis and handling</li>
+<li>
+<p>Exploratory Data Analysis (EDA)</p>
+</li>
+<li>
+<p><strong>Data Encoding</strong> 🔢</p>
+</li>
+<li>Categorical variable conversion</li>
+<li>Label and One-hot encoding implementation</li>
+<li>
+<p>Data interpretability preservation</p>
+</li>
+<li>
+<p><strong>Feature Selection and Engineering</strong> 🔍</p>
+</li>
+<li>Correlation analysis</li>
+<li>Feature importance evaluation</li>
+<li>New feature creation</li>
+</ol>
+<h2>🛠️ Technical Requirements &amp; Setup</h2>
+<h3>💻 System Requirements</h3>
+<ul>
+<li>🐍 Python 3.8+</li>
+<li>🧮 8GB RAM recommended</li>
+<li>💾 2GB free disk space</li>
+<li>📊 Jupyter Notebook environment</li>
+</ul>
+<h3>📦 Key Dependencies</h3>
+<p><code>pandas&gt;=1.3.0
+numpy&gt;=1.20.0
+scikit-learn&gt;=0.24.0
+matplotlib&gt;=3.4.0
+seaborn&gt;=0.11.0
+jupyter&gt;=1.0.0</code></p>
+<h3>⚙️ Configuration</h3>
+<ul>
+<li>All paths are relative to project root</li>
+<li>Data is automatically downloaded</li>
+<li>Visualizations are saved in project directory</li>
+</ul>
+<h3>Dependencies</h3>
+<ul>
+<li>Python &gt;= 3.8</li>
+<li>pandas &gt;= 1.3.0</li>
+<li>numpy &gt;= 1.20.0</li>
+<li>matplotlib &gt;= 3.4.0</li>
+<li>seaborn &gt;= 0.11.0</li>
+<li>scikit-learn &gt;= 0.24.0</li>
+<li>jupyter &gt;= 1.0.0</li>
+</ul>
+<h3>Dataset</h3>
+<p>The Adult Income Dataset is automatically downloaded from the UCI Machine Learning Repository when running the notebook. No manual download is required.</p>
+<h2>📊 Notebook Structure &amp; Documentation</h2>
+<h3>📑 Main Sections</h3>
+<ol>
+<li><strong>📋 Introduction &amp; Setup</strong></li>
+<li>Project overview</li>
+<li>Library imports</li>
+<li>
+<p>Configuration setup</p>
+</li>
+<li>
+<p><strong>🔍 Data Exploration</strong></p>
+</li>
+<li>Dataset characteristics</li>
+<li>Statistical analysis</li>
+<li>
+<p>Data quality assessment</p>
+</li>
+<li>
+<p><strong>⚡ Feature Engineering</strong></p>
+</li>
+<li>Age-based features</li>
+<li>Income ratio calculations</li>
+<li>Work pattern indicators</li>
+<li>
+<p>Distribution analysis</p>
+</li>
+<li>
+<p><strong>🤖 Model Development</strong></p>
+</li>
+<li>Data preprocessing</li>
+<li>Model selection</li>
+<li>Training pipeline</li>
+<li>
+<p>Hyperparameter tuning</p>
+</li>
+<li>
+<p><strong>📈 Results &amp; Analysis</strong></p>
+</li>
+<li>Performance metrics</li>
+<li>Feature importance</li>
+<li>Visual analysis</li>
+<li>Conclusions</li>
+</ol>
+<h3>📝 Documentation Standards</h3>
+<ul>
+<li>Detailed markdown explanations</li>
+<li>Code comments</li>
+<li>Visual result interpretation</li>
+<li>Implementation justifications</li>
+</ul>
+<p>The notebook is structured as a professional data science report with:
+1. Clear section headers and documentation
+2. Detailed explanations and justifications
+3. Visualizations and statistical analysis
+4. Code comments and implementation details</p>
+<h2>🔍 Key Features</h2>
+<ul>
+<li>Comprehensive data preprocessing pipeline</li>
+<li>Advanced feature engineering techniques</li>
+<li>Detailed correlation analysis</li>
+<li>Professional report formatting</li>
+<li>Reproducible code structure</li>
+</ul>
+<h3>💻 System Requirements</h3>
+<ul>
+<li>🐍 Python 3.8 or higher</li>
+<li>📔 Jupyter Notebook</li>
+<li>🧮 4GB RAM minimum</li>
+<li>💾 1GB free disk space</li>
+</ul>
+<h3>🔧 Installation Steps</h3>
+<ol>
+<li>Clone or download this repository</li>
+<li>Create a virtual environment (recommended):
+   <code>bash
+   python -m venv venv
+   .\venv\Scripts\activate  # On Windows</code></li>
+<li>Install dependencies</li>
+<li>Run the data download script</li>
+<li>Launch Jupyter Notebook</li>
+</ol>
+<h3>⚠️ Troubleshooting</h3>
+<ul>
+<li>🔍 If the automatic data download fails, use the manual Kaggle download option</li>
+<li>🔄 For package conflicts, try creating a fresh virtual environment</li>
+<li>✅ Check Python version compatibility if encountering errors</li>
+</ul>
+<h2>🔬 Technical Details</h2>
+<h3>🔄 Data Processing Pipeline</h3>
+<ol>
+<li>📥 Data acquisition from UCI repository</li>
+<li>🧹 Preprocessing and cleaning</li>
+<li>⚡ Feature engineering</li>
+<li>🎯 Model training and evaluation</li>
+</ol>
+<h3>🤖 Models Implemented</h3>
+<ol>
+<li>Support Vector Machine (SVM)</li>
+<li>Kernel: RBF</li>
+<li>Standardized features</li>
+<li>
+<p>Cross-validation</p>
+</li>
+<li>
+<p>Naïve Bayes</p>
+</li>
+<li>Gaussian NB implementation</li>
+<li>Probability-based classification</li>
+</ol>
+<h3>📊 Performance Metrics</h3>
+<ul>
+<li>🎯 Accuracy</li>
+<li>📈 Precision</li>
+<li>📉 Recall</li>
+<li>⭐ F1-Score</li>
+<li>🔄 Confusion Matrix</li>
+</ul>
+<h2>📝 Assignment Submission Guidelines</h2>
+<h3>🎯 Submission Components</h3>
+<ol>
+<li><strong>Main Notebook</strong> (<code>lalitnayyar_assignment9.ipynb</code>)</li>
+<li>✅ All cells executed in order</li>
+<li>✅ Output cells preserved</li>
+<li>✅ Visualizations properly rendered</li>
+<li>
+<p>✅ Markdown documentation complete</p>
+</li>
+<li>
+<p><strong>Supporting Files</strong></p>
+</li>
+<li>✅ <code>feature_engineering.py</code></li>
+<li>✅ <code>data_loader.py</code></li>
+<li>✅ <code>requirements.txt</code></li>
+<li>✅ Generated visualizations</li>
+</ol>
+<h3>🔍 Quality Checklist</h3>
+<ul>
+<li>✓ Code follows PEP 8 standards</li>
+<li>✓ All visualizations are properly labeled</li>
+<li>✓ Results are thoroughly explained</li>
+<li>✓ Feature engineering steps documented</li>
+<li>✓ Performance metrics analyzed</li>
+</ul>
+<h3>📤 Submission Process</h3>
+<ol>
+<li>Verify all cells are executed</li>
+<li>Ensure all outputs are saved</li>
+<li>Check visualization quality</li>
+<li>Validate documentation completeness</li>
+<li>Submit complete project folder</li>
+</ol>
+<h2>🤝 Support &amp; Contact</h2>
+<p>For any queries regarding this submission:
+- 📧 Email: lalitnayyar@gmail.com
+- 🎓 Course: IIMK Professional Certificate in Data Science
+- 📅 Batch: 2025
+1. Complete all notebook cells
+2. Ensure all visualizations are properly rendered
+3. Include analysis and interpretations
+4. Submit the entire project folder</p>
+<h2>Detailed Code Description</h2>
+<h3>1. Data Download Module (<code>download_data.py</code>)</h3>
+<p><code>python
+def download_adult_dataset():
+    # Downloads data from UCI repository
+    # Processes and combines train/test data
+    # Saves to data/adult.csv</code>
+- Handles automatic data download from UCI repository
+- Processes both training and test datasets
+- Performs initial data cleaning
+- Creates unified CSV file</p>
+<h3>2. Main Notebook Components (<code>income_prediction.ipynb</code>)</h3>
+<h4>Data Preprocessing</h4>
+<p><code>python
+def preprocess_data(df):
+    # Handles missing values
+    # Encodes categorical variables
+    # Scales numerical features</code>
+- Missing value imputation
+- Categorical variable encoding
+- Feature scaling
+- Data type conversions</p>
+<h4>Feature Engineering</h4>
+<ul>
+<li>Creation of derived features</li>
+<li>One-hot encoding for categorical variables</li>
+<li>Feature selection based on correlation analysis</li>
+<li>Handling of outliers</li>
+</ul>
+<h4>Model Implementation</h4>
+<ol>
+<li><strong>SVM Classifier</strong>
+<code>python
+svm_classifier = SVC(kernel='rbf', random_state=42)</code></li>
+<li>RBF kernel implementation</li>
+<li>Hyperparameter tuning</li>
+<li>
+<p>Cross-validation setup</p>
+</li>
+<li>
+<p><strong>Naïve Bayes Classifier</strong>
+<code>python
+nb_classifier = GaussianNB()</code></p>
+</li>
+<li>Gaussian probability distribution</li>
+<li>Prior probability calculation</li>
+<li>Feature independence assumption</li>
+</ol>
+<h4>Performance Evaluation</h4>
+<p><code>python
+def evaluate_model(y_true, y_pred):
+    # Calculates accuracy, precision, recall
+    # Generates confusion matrix
+    # Creates visualization plots</code>
+- Comprehensive metrics calculation
+- Visual performance analysis
+- Model comparison tools</p>
+<h3>3. Visualization Components</h3>
+<ul>
+<li>Distribution plots for features</li>
+<li>Correlation heatmaps</li>
+<li>ROC curves</li>
+<li>Confusion matrices</li>
+<li>Performance comparison charts</li>
+</ul>
+<h3>4. Helper Functions</h3>
+<p>```python</p>
+<h1>Data validation</h1>
+<p>def validate_data(df):
+    # Checks data integrity
+    # Validates data types
+    # Ensures consistent formatting</p>
+<h1>Feature importance</h1>
+<p>def get_feature_importance(model, X):
+    # Calculates feature importance
+    # Ranks features by impact
+    # Visualizes importance scores
+```</p>
+<h2>Version Information</h2>
+<p>v1.0.0 - Initial release for IIMK Assignment 9.1</p>
+</body>
+</html>
