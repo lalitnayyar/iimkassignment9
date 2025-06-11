@@ -76,6 +76,17 @@ jupyter notebook lalitnayyar_assignment9.ipynb
 - 📊 `data_loader.py`: Data handling utilities
 - 📝 `requirements.txt`: Project dependencies
 - 📘 `README.md`: Project documentation
+- 📄 `combined_submission.md`: Combined markdown version of submission
+- 📄 `notebook_feature_engineering.txt`: Notebook feature engineering notes
+- 📄 `notebook_header.md`: Notebook header markdown
+- 📄 `convert_readme.py`: Script to convert README
+- 📄 `download_data.py`: Data download script
+- 📄 `setup_code.py`: Project setup script
+- 📄 `feature_distributions.png`: Feature distribution image
+- 📄 `feature_distributions.b64.txt`: Base64-encoded feature image
+- 📄 `lalitnayyar_assignment9.pdf`: Exported PDF of notebook
+- 📁 `data/`: Data directory
+- 📁 `lalitnayyar_assignment9_md_files/`: Supporting notebook files
 
 ### 🔧 Supporting Modules
 1. **Feature Engineering Module** (`feature_engineering.py`)
@@ -90,9 +101,22 @@ jupyter notebook lalitnayyar_assignment9.ipynb
    - Data validation checks
 
 ### Core Files
-- 📓 `submission_notebook.ipynb`: Main Jupyter notebook containing the complete analysis and report
-- 📝 `requirements.txt`: List of Python dependencies
+- 📔 `lalitnayyar_assignment9.ipynb`: Main submission notebook
+- 🛠️ `feature_engineering.py`: Custom feature engineering module
+- 📊 `data_loader.py`: Data handling utilities
+- 📝 `requirements.txt`: Project dependencies
 - 📘 `README.md`: Project documentation
+- 📄 `combined_submission.md`: Combined markdown version of submission
+- 📄 `notebook_feature_engineering.txt`: Notebook feature engineering notes
+- 📄 `notebook_header.md`: Notebook header markdown
+- 📄 `convert_readme.py`: Script to convert README
+- 📄 `download_data.py`: Data download script
+- 📄 `setup_code.py`: Project setup script
+- 📄 `feature_distributions.png`: Feature distribution image
+- 📄 `feature_distributions.b64.txt`: Base64-encoded feature image
+- 📄 `lalitnayyar_assignment9.pdf`: Exported PDF of notebook
+- 📁 `data/`: Data directory
+- 📁 `lalitnayyar_assignment9_md_files/`: Supporting notebook files
 
 ### Notebook Sections
 1. **Data Preprocessing** 🔄
