@@ -5,198 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IIMK Assignment 9.1 Submission</title>
   <style>
-.notebook-code-editor pre, .notebook-code-editor code {
-}
-.notebook-output {
-  background: #f5f7fa;
-  color: #263238;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-  font-size: 1.05em;
-  padding: 1em 1.3em;
-  margin: 0 0 1.5em 0;
-  border-radius: 8px;
-  text-align: left;
-  box-shadow: none;
-  border: none;
-  white-space: pre-line;
-  line-height: 1.6;
-}
-  background: #e3eafc !important;
-  color: #21243b !important;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace !important;
-  font-size: 1.07em;
-  padding: 1.1em 1.3em !important;
-  border-radius: 9px !important;
-  box-shadow: none !important;
-  text-align: left !important;
-  margin: 0 !important;
-  line-height: 1.6;
-  border-left: 5px solid #1976d2;
-  border: none;
-}
-.notebook-code-editor {
-  margin: 0 0 1.5em 0;
-}
-.viz-img {
-  display: block;
-  margin: 1.5em auto 0.5em auto;
-  max-width: 100%;
-  border-radius: 12px;
-  border: 3px solid #90caf9;
-  box-shadow: 0 2px 12px #1976d230;
-  background: #fff;
-}
-.viz-caption {
-  text-align: center;
-  color: #1565c0;
-  font-size: 1.05em;
-  margin-top: 0.25em;
-  font-style: italic;
-}
-@media (max-width: 900px) {
-  .viz-code-flex {
-    flex-direction: column;
-    gap: 1em;
-  }
-  .notebook-code-editor, .viz-img-block {
-    max-width: 100%;
-    min-width: 0;
-    margin: 0 auto;
-  }
-}
-
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-  gap: 2em;
-  margin: 2em 0;
-  flex-wrap: wrap;
-}
-.viz-code-block, .viz-img-block {
-  background: #e3f2fd;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px #1976d230;
-  padding: 1em 1.5em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 320px;
-  max-width: 500px;
-  flex: 1 1 350px;
-}
-.viz-img {
-  max-width: 100%;
-  height: auto;
-  border: 3px solid #90caf9;
-  border-radius: 12px;
-  margin: 0 auto 1em auto;
-  box-shadow: 0 2px 12px #1976d230;
-  background: #fff;
-}
-.viz-caption {
-  text-align: center;
-  color: #1565c0;
-  font-size: 1.05em;
-  margin-top: 0.25em;
-  font-style: italic;
-}
-@media (max-width: 900px) {
-  .viz-code-flex {
-    flex-direction: column;
-    gap: 1em;
-  }
-  .viz-code-block, .viz-img-block {
-    max-width: 100%;
-    min-width: 0;
-    margin: 0 auto;
-  }
-}
-
-/* Responsive Table Styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5em;
-  background: #f7fbff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px #1976d220;
-}
-thead, th {
-  background: linear-gradient(90deg, #1976d2 60%, #90caf9 100%);
-  color: #fff;
-  font-weight: 600;
-}
-td, th {
-  padding: 0.75em 1em;
-  border: 1px solid #e3eaf3;
-  text-align: left;
-  font-size: 1em;
-}
-tbody tr:nth-child(even) {
-  background: #e3f2fd;
-}
-tbody tr:hover {
-  background: #bbdefb;
-}
-.table-responsive {
-  width: 100%;
-  overflow-x: auto;
-}
-@media (max-width: 900px) {
-  table, thead, tbody, th, td, tr {
-    display: block;
-  }
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-  tr {
-    margin-bottom: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #1976d220;
-    background: #f7fbff;
-  }
-  td {
-    border: none;
-    border-bottom: 1px solid #e3eaf3;
-    position: relative;
-    padding-left: 50%;
-    min-height: 2.5em;
-    white-space: pre-line;
-  }
-  td:before {
-    position: absolute;
-    top: 0;
-    left: 1em;
-    width: 45%;
-    padding-right: 1em;
-    white-space: pre-line;
-    font-weight: bold;
-    color: #1976d2;
-    content: attr(data-label);
-  }
-}
-/* Code and Image Block Enhancements */
-pre, code {
-  background: #e3f2fd;
-  color: #263238;
-  border-radius: 8px;
-  font-size: 1em;
-  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-  padding: 0.5em 1em;
-  margin: 0.5em 0;
-  overflow-x: auto;
-  box-shadow: 0 2px 8px #1976d220;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 2em auto;
-}
-
     body {
       font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
       background: linear-gradient(135deg, #e3f0ff 0%, #b3d8ff 100%);
@@ -273,6 +81,7 @@ img {
       width: 100%;
       background: #fafcff;
       margin: 1.5em 0;
+      font-size: 0.95em;
     }
     th, td {
       border: 1px solid #bbdefb;
@@ -294,6 +103,51 @@ img {
       color: #1565c0;
       border-radius: 8px;
     }
+    img, .viz-img {
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 2em auto;
+      border-radius: 12px;
+      border: 3px solid #90caf9;
+      box-shadow: 0 2px 12px #1976d230;
+      background: #fff;
+    }
+    .viz-caption {
+      text-align: center;
+      color: #1565c0;
+      font-size: 1.05em;
+      margin-top: 0.25em;
+      font-style: italic;
+    }
+    .notebook-output {
+      background: #f5f7fa;
+      color: #263238;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+      font-size: 1.05em;
+      padding: 1em 1.3em;
+      margin: 0 0 1.5em 0;
+      border-radius: 8px;
+      text-align: left;
+      box-shadow: none;
+      border: none;
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+    .notebook-code-editor {
+      background: #e3eafc !important;
+      color: #21243b !important;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace !important;
+      font-size: 1.07em;
+      padding: 1.1em 1.3em !important;
+      border-radius: 9px !important;
+      box-shadow: none !important;
+      text-align: left !important;
+      margin: 0 0 1.5em 0 !important;
+      line-height: 1.6;
+      border-left: 5px solid #1976d2;
+      border: none;
+    }
     @media (max-width: 600px) {
       .container {
         padding: 12px 2vw;
@@ -302,546 +156,222 @@ img {
         font-size: 0.9em;
         padding: 0.5em;
       }
+      img, .viz-img {
+        max-width: 100%;
+      }
+      table {
+        font-size: 0.85em;
+      }
+    }
+    @page {
+      size: A4;
+      margin: 1.5cm 1.2cm 1.5cm 1.2cm;
     }
   </style>
 </head>
 <body>
 <div class="container">
-<h1 id="iimk-professional-certificate-in-data-science-and-ai-for-managers">🎓 IIMK Professional Certificate in Data Science and AI for Managers</h1>
-<h2
-id="assignment-9.1-advanced-income-prediction-with-feature-engineering">📊
-Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
-<h3 id="student-information">👨‍🎓 Student Information:</h3>
+<!-- README content -->
+<h1>🎓 IIMK Professional Certificate in Data Science and AI for Managers</h1>
+<h2>📊 Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
+<h3>👨‍🎓 Student Information:</h3>
 <ul>
-<li><strong>Name:</strong> Lalit Nayyar</li>
-<li><strong>Email:</strong> lalitnayyar@gmail.com</li>
-<li><strong>Course:</strong> Professional Certificate in Data Science
-and Artificial Intelligence for Managers</li>
-<li><strong>Institution:</strong> Indian Institute of Management
-Kozhikode (IIMK)</li>
-<li><strong>Submission Date:</strong> June 5, 2025</li>
+  <li><strong>Name:</strong> Lalit Nayyar</li>
+  <li><strong>Email:</strong> lalitnayyar@gmail.com</li>
+  <li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
+  <li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
+  <li><strong>Submission Date:</strong> June 5, 2025</li>
 </ul>
-<h2 id="assignment-overview">🌟 Assignment Overview</h2>
-<p>This project showcases advanced machine learning techniques for
-income prediction using the Adult Income Dataset. The implementation
-focuses on sophisticated feature engineering, model development, and
-comprehensive analysis.</p>
-<h3 id="key-objectives">🎯 Key Objectives</h3>
-<ol type="1">
-<li>🔍 Implement advanced feature engineering techniques</li>
-<li>📊 Develop robust classification models</li>
-<li>📈 Analyze model performance with multiple metrics</li>
-<li>📝 Create a professional data science report</li>
+<h2>🌟 Assignment Overview</h2>
+<p>This project showcases advanced machine learning techniques for income prediction using the Adult Income Dataset. The implementation focuses on sophisticated feature engineering, model development, and comprehensive analysis.</p>
+<h3>🎯 Key Objectives</h3>
+<ol>
+  <li>🔍 Implement advanced feature engineering techniques</li>
+  <li>📊 Develop robust classification models</li>
+  <li>📈 Analyze model performance with multiple metrics</li>
+  <li>📝 Create a professional data science report</li>
 </ol>
-<h2 id="assignment-overview-1">📋 Assignment Overview</h2>
-<p>🔍 This project implements supervised learning techniques to predict
-income levels using the Adult Income Dataset. The assignment focuses on
-understanding classification models, their performance metrics, and data
-preprocessing techniques.</p>
-<h3 id="learning-objectives">🎯 Learning Objectives</h3>
-<ol type="1">
-<li>📚 Detail the Supervised Learning process</li>
-<li>📈 Evaluate classifiers based on specific performance metrics</li>
-<li>🤖 Perform comprehensive data preprocessing and feature
-engineering</li>
-<li>📊 Create a professional data science report</li>
+<h2>📋 Assignment Overview</h2>
+<p>🔍 This project implements supervised learning techniques to predict income levels using the Adult Income Dataset. The assignment focuses on understanding classification models, their performance metrics, and data preprocessing techniques.</p>
+<h3>🎯 Learning Objectives</h3>
+<ol>
+  <li>📚 Detail the Supervised Learning process</li>
+  <li>📈 Evaluate classifiers based on specific performance metrics</li>
+  <li>🤖 Perform comprehensive data preprocessing and feature engineering</li>
+  <li>📊 Create a professional data science report</li>
 </ol>
-<h2 id="user-guide">📖 User Guide</h2>
-<h3 id="quick-start">🚀 Quick Start</h3>
-<ol type="1">
-<li><strong>Environment Setup</strong></li>
+<h2>📖 User Guide</h2>
+<h3>🚀 Quick Start</h3>
+<ol>
+  <li><strong>Environment Setup</strong></li>
 </ol>
-<div class="sourceCode" id="cb1"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv venv</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\v</span>env<span class="dt">\S</span>cripts<span class="dt">\a</span>ctivate  <span class="co"># Windows</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div>
-<ol start="2" type="1">
-<li><strong>Launch Notebook</strong></li>
+<div class="sourceCode"><pre class="sourceCode bash">python -m venv venv
+.\venv\Scripts\activate  # Windows
+pip install -r requirements.txt</pre></div>
+<ol start="2">
+  <li><strong>Launch Notebook</strong></li>
 </ol>
-<div class="sourceCode" id="cb2"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook lalitnayyar_assignment9.ipynb</span></code></pre></div>
-<h3 id="notebook-navigation">📓 Notebook Navigation</h3>
-<ol type="1">
-<li>📥 <strong>Data Loading &amp; Exploration</strong>
-<ul>
-<li>Dataset overview</li>
-<li>Initial statistics</li>
-<li>Data quality checks</li>
-</ul></li>
-<li>⚡ <strong>Feature Engineering</strong>
-<ul>
-<li>Age grouping</li>
-<li>Income ratios calculation</li>
-<li>Work-life balance indicators</li>
-<li>Feature distribution analysis</li>
-</ul></li>
-<li>🤖 <strong>Model Development</strong>
-<ul>
-<li>Data preprocessing</li>
-<li>Model training</li>
-<li>Performance evaluation</li>
-</ul></li>
-<li>📊 <strong>Results &amp; Analysis</strong>
-<ul>
-<li>Visualization of results</li>
-<li>Performance metrics</li>
-<li>Feature importance analysis</li>
-</ul></li>
+<div class="sourceCode"><pre class="sourceCode bash">jupyter notebook lalitnayyar_assignment9.ipynb</pre></div>
+<h3>📓 Notebook Navigation</h3>
+<ol>
+  <li>📥 <strong>Data Loading & Exploration</strong>
+    <ul>
+      <li>Dataset overview</li>
+      <li>Initial statistics</li>
+      <li>Data quality checks</li>
+    </ul>
+  </li>
+  <li>⚡ <strong>Feature Engineering</strong>
+    <ul>
+      <li>Age grouping</li>
+      <li>Income ratios calculation</li>
+      <li>Work-life balance indicators</li>
+      <li>Feature distribution analysis</li>
+    </ul>
+  </li>
+  <li>🤖 <strong>Model Development</strong>
+    <ul>
+      <li>Data preprocessing</li>
+      <li>Model training</li>
+      <li>Performance evaluation</li>
+    </ul>
+  </li>
+  <li>📊 <strong>Results & Analysis</strong>
+    <ul>
+      <li>Visualization of results</li>
+      <li>Performance metrics</li>
+      <li>Feature importance analysis</li>
+    </ul>
+  </li>
 </ol>
-<h2 id="project-structure-code-organization">📁 Project Structure &amp;
-Code Organization</h2>
-<h3 id="core-files">📌 Core Files</h3>
+<h2>📁 Project Structure & Code Organization</h2>
 <ul>
-<li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission
-notebook</li>
-<li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering
-module</li>
-<li>📊 <code>data_loader.py</code>: Data handling utilities</li>
-<li>📝 <code>requirements.txt</code>: Project dependencies</li>
-<li>📘 <code>README.md</code>: Project documentation</li>
+  <li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission notebook</li>
+  <li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering module</li>
+  <li>📊 <code>data_loader.py</code>: Data handling utilities</li>
+  <li>📝 <code>requirements.txt</code>: Project dependencies</li>
+  <li>📘 <code>README.md</code>: Project documentation</li>
+  <li>📄 <code>combined_submission.md</code>: Combined markdown version of submission</li>
+  <li>📄 <code>notebook_feature_engineering.txt</code>: Notebook feature engineering notes</li>
+  <li>📄 <code>notebook_header.md</code>: Notebook header markdown</li>
+  <li>📄 <code>convert_readme.py</code>: Script to convert README</li>
+  <li>📄 <code>download_data.py</code>: Data download script</li>
+  <li>📄 <code>setup_code.py</code>: Project setup script</li>
+  <li>📄 <code>feature_distributions.png</code>: Feature distribution image</li>
+  <li>📄 <code>feature_distributions.b64.txt</code>: Base64-encoded feature image</li>
+  <li>📄 <code>lalitnayyar_assignment9.pdf</code>: Exported PDF of notebook</li>
+  <li>📁 <code>data/</code>: Data directory</li>
+  <li>📁 <code>lalitnayyar_assignment9_md_files/</code>: Supporting notebook files</li>
 </ul>
-<h3 id="supporting-modules">🔧 Supporting Modules</h3>
-<ol type="1">
-<li><strong>Feature Engineering Module</strong>
-(<code>feature_engineering.py</code>)
-<ul>
-<li><code>create_age_groups()</code>: Age categorization</li>
-<li><code>create_income_ratios()</code>: Financial feature creation</li>
-<li><code>create_work_life_indicators()</code>: Work pattern
-analysis</li>
-<li><code>plot_feature_distributions()</code>: Visualization
-functions</li>
-</ul></li>
-<li><strong>Data Loading Module</strong> (<code>data_loader.py</code>)
-<ul>
-<li>Dataset download functionality</li>
-<li>Initial preprocessing</li>
-<li>Data validation checks</li>
-</ul></li>
-</ol>
-<h3 id="core-files-1">Core Files</h3>
-<ul>
-<li>📓 <code>submission_notebook.ipynb</code>: Main Jupyter notebook
-containing the complete analysis and report</li>
-<li>📝 <code>requirements.txt</code>: List of Python dependencies</li>
-<li>📘 <code>README.md</code>: Project documentation</li>
-</ul>
-<h3 id="notebook-sections">Notebook Sections</h3>
-<ol type="1">
-<li><strong>Data Preprocessing</strong> 🔄
-<ul>
-<li>Dataset loading and initial exploration</li>
-<li>Missing value analysis and handling</li>
-<li>Exploratory Data Analysis (EDA)</li>
-</ul></li>
-<li><strong>Data Encoding</strong> 🔢
-<ul>
-<li>Categorical variable conversion</li>
-<li>Label and One-hot encoding implementation</li>
-<li>Data interpretability preservation</li>
-</ul></li>
-<li><strong>Feature Selection and Engineering</strong> 🔍
-<ul>
-<li>Correlation analysis</li>
-<li>Feature importance evaluation</li>
-<li>New feature creation</li>
-</ul></li>
-</ol>
-<h2 id="technical-requirements-setup">🛠️ Technical Requirements &amp;
-Setup</h2>
-<h3 id="system-requirements">💻 System Requirements</h3>
-<ul>
-<li>🐍 Python 3.8+</li>
-<li>🧮 8GB RAM recommended</li>
-<li>💾 2GB free disk space</li>
-<li>📊 Jupyter Notebook environment</li>
-</ul>
-<h3 id="key-dependencies">📦 Key Dependencies</h3>
-<pre><code>pandas&gt;=1.3.0
-numpy&gt;=1.20.0
-scikit-learn&gt;=0.24.0
-matplotlib&gt;=3.4.0
-seaborn&gt;=0.11.0
-jupyter&gt;=1.0.0</code></pre>
-<h3 id="configuration">⚙️ Configuration</h3>
-<ul>
-<li>All paths are relative to project root</li>
-<li>Data is automatically downloaded</li>
-<li>Visualizations are saved in project directory</li>
-</ul>
-<h3 id="dependencies">Dependencies</h3>
-<ul>
-<li>Python &gt;= 3.8</li>
-<li>pandas &gt;= 1.3.0</li>
-<li>numpy &gt;= 1.20.0</li>
-<li>matplotlib &gt;= 3.4.0</li>
-<li>seaborn &gt;= 0.11.0</li>
-<li>scikit-learn &gt;= 0.24.0</li>
-<li>jupyter &gt;= 1.0.0</li>
-</ul>
-<h3 id="dataset">Dataset</h3>
-<p>The Adult Income Dataset is automatically downloaded from the UCI
-Machine Learning Repository when running the notebook. No manual
-download is required.</p>
-<h2 id="notebook-structure-documentation">📊 Notebook Structure &amp;
-Documentation</h2>
-<h3 id="main-sections">📑 Main Sections</h3>
-<ol type="1">
-<li><strong>📋 Introduction &amp; Setup</strong>
-<ul>
-<li>Project overview</li>
-<li>Library imports</li>
-<li>Configuration setup</li>
-</ul></li>
-<li><strong>🔍 Data Exploration</strong>
-<ul>
-<li>Dataset characteristics</li>
-<li>Statistical analysis</li>
-<li>Data quality assessment</li>
-</ul></li>
-<li><strong>⚡ Feature Engineering</strong>
-<ul>
-<li>Age-based features</li>
-<li>Income ratio calculations</li>
-<li>Work pattern indicators</li>
-<li>Distribution analysis</li>
-</ul></li>
-<li><strong>🤖 Model Development</strong>
-<ul>
-<li>Data preprocessing</li>
-<li>Model selection</li>
-<li>Training pipeline</li>
-<li>Hyperparameter tuning</li>
-</ul></li>
-<li><strong>📈 Results &amp; Analysis</strong>
-<ul>
-<li>Performance metrics</li>
-<li>Feature importance</li>
-<li>Visual analysis</li>
-<li>Conclusions</li>
-</ul></li>
-</ol>
-<h3 id="documentation-standards">📝 Documentation Standards</h3>
-<ul>
-<li>Detailed markdown explanations</li>
-<li>Code comments</li>
-<li>Visual result interpretation</li>
-<li>Implementation justifications</li>
-</ul>
-<p>The notebook is structured as a professional data science report
-with: 1. Clear section headers and documentation 2. Detailed
-explanations and justifications 3. Visualizations and statistical
-analysis 4. Code comments and implementation details</p>
-<h2 id="key-features">🔍 Key Features</h2>
-<ul>
-<li>Comprehensive data preprocessing pipeline</li>
-<li>Advanced feature engineering techniques</li>
-<li>Detailed correlation analysis</li>
-<li>Professional report formatting</li>
-<li>Reproducible code structure</li>
-</ul>
-<h3 id="system-requirements-1">💻 System Requirements</h3>
-<ul>
-<li>🐍 Python 3.8 or higher</li>
-<li>📔 Jupyter Notebook</li>
-<li>🧮 4GB RAM minimum</li>
-<li>💾 1GB free disk space</li>
-</ul>
-<h3 id="installation-steps">🔧 Installation Steps</h3>
-<ol type="1">
-<li><p>Clone or download this repository</p></li>
-<li><p>Create a virtual environment (recommended):</p>
-<div class="sourceCode" id="cb4"><pre
-class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv venv</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\v</span>env<span class="dt">\S</span>cripts<span class="dt">\a</span>ctivate  <span class="co"># On Windows</span></span></code></pre></div></li>
-<li><p>Install dependencies</p></li>
-<li><p>Run the data download script</p></li>
-<li><p>Launch Jupyter Notebook</p></li>
-</ol>
-<h3 id="troubleshooting">⚠️ Troubleshooting</h3>
-<ul>
-<li>🔍 If the automatic data download fails, use the manual Kaggle
-download option</li>
-<li>🔄 For package conflicts, try creating a fresh virtual
-environment</li>
-<li>✅ Check Python version compatibility if encountering errors</li>
-</ul>
-<h2 id="technical-details">🔬 Technical Details</h2>
-<h3 id="data-processing-pipeline">🔄 Data Processing Pipeline</h3>
-<ol type="1">
-<li>📥 Data acquisition from UCI repository</li>
-<li>🧹 Preprocessing and cleaning</li>
-<li>⚡ Feature engineering</li>
-<li>🎯 Model training and evaluation</li>
-</ol>
-<h3 id="models-implemented">🤖 Models Implemented</h3>
-<ol type="1">
-<li>Support Vector Machine (SVM)
-<ul>
-<li>Kernel: RBF</li>
-<li>Standardized features</li>
-<li>Cross-validation</li>
-</ul></li>
-<li>Naïve Bayes
-<ul>
-<li>Gaussian NB implementation</li>
-<li>Probability-based classification</li>
-</ul></li>
-</ol>
-<h3 id="performance-metrics">📊 Performance Metrics</h3>
-<ul>
-<li>🎯 Accuracy</li>
-<li>📈 Precision</li>
-<li>📉 Recall</li>
-<li>⭐ F1-Score</li>
-<li>🔄 Confusion Matrix</li>
-</ul>
-<h2 id="assignment-submission-guidelines">📝 Assignment Submission
-Guidelines</h2>
-<h3 id="submission-components">🎯 Submission Components</h3>
-<ol type="1">
-<li><strong>Main Notebook</strong>
-(<code>lalitnayyar_assignment9.ipynb</code>)
-<ul>
-<li>✅ All cells executed in order</li>
-<li>✅ Output cells preserved</li>
-<li>✅ Visualizations properly rendered</li>
-<li>✅ Markdown documentation complete</li>
-</ul></li>
-<li><strong>Supporting Files</strong>
-<ul>
-<li>✅ <code>feature_engineering.py</code></li>
-<li>✅ <code>data_loader.py</code></li>
-<li>✅ <code>requirements.txt</code></li>
-<li>✅ Generated visualizations</li>
-</ul></li>
-</ol>
-<h3 id="quality-checklist">🔍 Quality Checklist</h3>
-<ul>
-<li>✓ Code follows PEP 8 standards</li>
-<li>✓ All visualizations are properly labeled</li>
-<li>✓ Results are thoroughly explained</li>
-<li>✓ Feature engineering steps documented</li>
-<li>✓ Performance metrics analyzed</li>
-</ul>
-<h3 id="submission-process">📤 Submission Process</h3>
-<ol type="1">
-<li>Verify all cells are executed</li>
-<li>Ensure all outputs are saved</li>
-<li>Check visualization quality</li>
-<li>Validate documentation completeness</li>
-<li>Submit complete project folder</li>
-</ol>
-<h2 id="support-contact">🤝 Support &amp; Contact</h2>
-<p>For any queries regarding this submission: - 📧 Email:
-lalitnayyar@gmail.com - 🎓 Course: IIMK Professional Certificate in Data
-Science - 📅 Batch: 2025 1. Complete all notebook cells 2. Ensure all
-visualizations are properly rendered 3. Include analysis and
-interpretations 4. Submit the entire project folder</p>
-<h2 id="detailed-code-description">Detailed Code Description</h2>
-<h3 id="data-download-module-download_data.py">1. Data Download Module
-(<code>download_data.py</code>)</h3>
-<div class="sourceCode" id="cb5"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> download_adult_dataset():</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Downloads data from UCI repository</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Processes and combines train/test data</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Saves to data/adult.csv</span></span></code></pre></div>
-<ul>
-<li>Handles automatic data download from UCI repository</li>
-<li>Processes both training and test datasets</li>
-<li>Performs initial data cleaning</li>
-<li>Creates unified CSV file</li>
-</ul>
-<h3 id="main-notebook-components-income_prediction.ipynb">2. Main
-Notebook Components (<code>income_prediction.ipynb</code>)</h3>
-<h4 id="data-preprocessing">Data Preprocessing</h4>
-<div class="sourceCode" id="cb6"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess_data(df):</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handles missing values</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Encodes categorical variables</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Scales numerical features</span></span></code></pre></div>
-<ul>
-<li>Missing value imputation</li>
-<li>Categorical variable encoding</li>
-<li>Feature scaling</li>
-<li>Data type conversions</li>
-</ul>
-<h4 id="feature-engineering">Feature Engineering</h4>
-<ul>
-<li>Creation of derived features</li>
-<li>One-hot encoding for categorical variables</li>
-<li>Feature selection based on correlation analysis</li>
-<li>Handling of outliers</li>
-</ul>
-<h4 id="model-implementation">Model Implementation</h4>
-<ol type="1">
-<li><strong>SVM Classifier</strong></li>
-</ol>
-<div class="sourceCode" id="cb7"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>svm_classifier <span class="op">=</span> SVC(kernel<span class="op">=</span><span class="st">&#39;rbf&#39;</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code></pre></div>
-<ul>
-<li>RBF kernel implementation</li>
-<li>Hyperparameter tuning</li>
-<li>Cross-validation setup</li>
-</ul>
-<ol start="2" type="1">
-<li><strong>Naïve Bayes Classifier</strong></li>
-</ol>
-<div class="sourceCode" id="cb8"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nb_classifier <span class="op">=</span> GaussianNB()</span></code></pre></div>
-<ul>
-<li>Gaussian probability distribution</li>
-<li>Prior probability calculation</li>
-<li>Feature independence assumption</li>
-</ul>
-<h4 id="performance-evaluation">Performance Evaluation</h4>
-<div class="sourceCode" id="cb9"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate_model(y_true, y_pred):</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculates accuracy, precision, recall</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generates confusion matrix</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Creates visualization plots</span></span></code></pre></div>
-<ul>
-<li>Comprehensive metrics calculation</li>
-<li>Visual performance analysis</li>
-<li>Model comparison tools</li>
-</ul>
-<h3 id="visualization-components">3. Visualization Components</h3>
-<ul>
-<li>Distribution plots for features</li>
-<li>Correlation heatmaps</li>
-<li>ROC curves</li>
-<li>Confusion matrices</li>
-<li>Performance comparison charts</li>
-</ul>
-<h3 id="helper-functions">4. Helper Functions</h3>
-<div class="sourceCode" id="cb10"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data validation</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> validate_data(df):</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Checks data integrity</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Validates data types</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensures consistent formatting</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Feature importance</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_feature_importance(model, X):</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculates feature importance</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ranks features by impact</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Visualizes importance scores</span></span></code></pre></div>
-<h2 id="version-information">Version Information</h2>
-<p>v1.0.0 - Initial release for IIMK Assignment 9.1 # 🎓 IIMK
-Professional Certificate in Data Science and AI for Managers</p>
-<h2 id="assignment-9.1-supervised-learning-and-classification-models">📊
-Assignment 9.1: Supervised Learning and Classification Models</h2>
-<h3 id="student-information-1">👨‍🎓 Student Information:</h3>
-<ul>
-<li><strong>Name:</strong> Lalit Nayyar</li>
-<li><strong>Email:</strong> lalitnayyar@gmail.com</li>
-<li><strong>Course:</strong> Professional Certificate in Data Science
-and Artificial Intelligence for Managers</li>
-<li><strong>Institution:</strong> Indian Institute of Management
-Kozhikode (IIMK)</li>
-</ul>
-<h2 id="assignment-overview-2">📋 Assignment Overview</h2>
-<p>🔍 This project implements supervised learning techniques to predict
-income levels using the Adult Income Dataset. The assignment focuses on
-understanding classification models, their performance metrics, and data
-preprocessing techniques.</p>
-<h3 id="dataset-description">Dataset Description</h3>
-<p>The Adult Income Dataset, also known as the Census Income dataset,
-contains demographic and employment-related features to predict whether
-an individual’s annual income exceeds $50,000. This real-world dataset
-presents various data preprocessing and modeling challenges that are
-common in practical machine learning applications.</p>
-<div class="sourceCode" id="cb11"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> pandas <span class="kw">as</span> pd</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> numpy <span class="kw">as</span> np</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> matplotlib.pyplot <span class="kw">as</span> plt</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">import</span> seaborn <span class="kw">as</span> sns</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> sklearn.preprocessing <span class="kw">import</span> LabelEncoder</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> sklearn.model_selection <span class="kw">import</span> train_test_split</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Set random seed for reproducibility</span></span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">42</span>)</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Configure visualization settings</span></span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">&#39;default&#39;</span>)  <span class="co"># Use default matplotlib style</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>sns.set_theme()  <span class="co"># Set seaborn theme</span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span></code></pre></div>
-<h2 id="data-preprocessing-1">1. Data Preprocessing 🔄</h2>
-<h3 id="a.-loading-the-dataset">1.a. Loading the Dataset</h3>
-<p>We begin by loading the Adult Income dataset. This dataset contains
-various demographic and employment-related features such as age,
-education, occupation, and other socio-economic factors that might
-influence an individual’s income level.</p>
-<p>The dataset features include: - Numerical attributes: age, fnlwgt,
-education-num, capital-gain, capital-loss, hours-per-week - Categorical
-attributes: workclass, education, marital-status, occupation,
-relationship, race, sex, native-country</p>
-<div class="sourceCode" id="cb12"><pre
-class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define column names</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>columns <span class="op">=</span> [</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;age&#39;</span>, <span class="st">&#39;workclass&#39;</span>, <span class="st">&#39;fnlwgt&#39;</span>, <span class="st">&#39;education&#39;</span>, <span class="st">&#39;education-num&#39;</span>,</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;marital-status&#39;</span>, <span class="st">&#39;occupation&#39;</span>, <span class="st">&#39;relationship&#39;</span>, <span class="st">&#39;race&#39;</span>, <span class="st">&#39;sex&#39;</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;capital-gain&#39;</span>, <span class="st">&#39;capital-loss&#39;</span>, <span class="st">&#39;hours-per-week&#39;</span>, <span class="st">&#39;native-country&#39;</span>, <span class="st">&#39;income&#39;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the dataset</span></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">&#39;https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data&#39;</span>,</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>                 names<span class="op">=</span>columns, skipinitialspace<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Display the first few rows and basic information</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Dataset Shape:&quot;</span>, df.shape)</span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">First few rows of the dataset:&quot;</span>)</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div>
-<div class="notebook-output">Dataset Shape: (32561, 15)<br>First few rows of the dataset:</div>
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-{{ ... }}
+<!-- Notebook content from lalitnayyar_assignment9.ipynb starts here -->
+<div class="notebook-section">
+  <h2>📊 Assignment 9.1: Supervised Learning and Classification Models</h2>
+  <h3>👨‍🎓 Student Information:</h3>
+  <ul>
+    <li><strong>Name:</strong> Lalit Nayyar</li>
+    <li><strong>Email:</strong> lalitnayyar@gmail.com</li>
+    <li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
+    <li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
+  </ul>
+  <h3>📋 Assignment Overview</h3>
+  <p>🔍 This project implements supervised learning techniques to predict income levels using the Adult Income Dataset. The assignment focuses on understanding classification models, their performance metrics, and data preprocessing techniques.</p>
+  <h4>Dataset Description</h4>
+  <p>The Adult Income Dataset, also known as the Census Income dataset, contains demographic and employment-related features to predict whether an individual's annual income exceeds $50,000. This real-world dataset presents various data preprocessing and modeling challenges that are common in practical machine learning applications.</p>
 
-# One-hot encode the new categorical features
-df = pd.get_dummies(df, columns=['age_group', 'work_intensity'])
-</code></pre>
-</div>
-<div class="notebook-output">Final dataset shape: (32561, 101)<br><br>New features:<br>['capital_utilization', 'age_group_Young', 'age_group_Early-Career', 'age_group_Mid-Career', 'age_group_Late-Career', 'age_group_Pre-Retirement', 'age_group_Retirement', 'work_intensity_High', 'work_intensity_Normal', 'work_intensity_Part-time']</div>
-<div class="notebook-code-editor">
-<pre><code class="sourceCode python"># Import our feature engineering module
-from feature_engineering import (
-    create_age_groups, 
-    create_income_ratios, 
-{{ ... }}
-    count = df[col].sum()
-    percentage = (count / len(df)) * 100
-    print(f"- {col}: {count:,} instances ({percentage:.1f}%)")
-</code></pre>
-</div>
-<div class="notebook-output">New features added:<br>Age Groups: ['36-45', '46-55', '26-35', '18-25', '56-65', '65+']<br>Categories (6, object): ['18-25' &lt; '26-35' &lt; '36-45' &lt; '46-55' &lt; '56-65' &lt; '65+']<br><br>Work-Life Balance Indicators:<br>- standard_work_week: 15,217 instances (46.7%)<br>- overwork: 6,761 instances (20.8%)<br>- part_time: 5,583 instances (17.1%)</div>
-<div class="viz-img-block">
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABcwAAAPYCAYAAADn2rqgAAAAOnRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjEwLjMsIGh0dHBzOi8vbWF0cGxvdGxpYi5vcmcvZiW1igAAAAlwSFlzAAAPYQAAD2EBqD+naQABAABJREFUeJzs3QeUFNXWt/E9Q5acg5IMF5AsKEmQJCCgIhhQFESUK4oKKCiKI0lRkWhCVBCuoGJCBSVIVoJIkCCgIghIVJKA5PnW/3yr+u2eRKqZnp55fms1M11VU326q5s+tWuffaJiY2NjDQAAAAAA
-AAAAXJDoC/tzAAAAAAAAAAAgBNwBAAAAAAAAAPABAXcAAAAAAAAAAHxAwB0AAAAA
-AAAAAB8QcAcAAAAAAAAAwAcE3AEAAAAAAAAA8AEBdwAAAAAAAAAAfEDAHQAAAAAA
-AAA...iIiIgbMiYiIiIiIiIiIiIiIiCGDAnIiIiIiIiIiIiIhDw/wFeyhv1GQ6VgwAAAABJRU5ErkJggg==" alt="Feature Distributions" class="viz-img" />
-  <div class="viz-caption">Figure: Feature Distributions</div>
-</div>
-<div class="notebook-code-editor">
-<pre><code class="sourceCode python"># Brief analysis of engineered features
-<div class="notebook-output">Feature Analysis:<br>1. Age Distribution:<br>(see table below)<br><br>2. Work Pattern Analysis:<br>(see table below)</div>
-</div>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>age_income <span class="op">=</span> pd.crosstab(df[<span class="st">&#39;age_group&#39;</span>], df[<span class="st">&#39;income&#39;</span>], normalize<span class="op">=</span><span class="st">&#39;index&#39;</span>) <span class="op">*</span> <span class="dv">100</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(age_income.<span class="bu">round</span>(<span class="dv">2</span>))</span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">2. Work Pattern Analysis:&quot;</span>)</span>
-{{ ... }}
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">&#39;data/adult_with_features.csv&#39;</span>, index<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Features saved successfully!&quot;</span>)</span></code></pre></div>
-<pre><code>Saving dataset with new features...
-Features saved successfully!</code></pre>
-<div class="sourceCode" id="cb35"><pre
-class="sourceCode python"<div class="notebook-output">&lt;Figure size 1500x1000 with 0 Axes&gt;</div></div>
-<div class="sourceCode" id="cb36"><pre
-class="sourceCode python"<div class="notebook-output">&lt;Figure size 1500x1000 with 0 Axes&gt;</div></div>
-<div class="sourceCode" id="cb37"><pre
-class="sourceCode python"<div class="notebook-output">&lt;Figure size 1500x1000 with 0 Axes&gt;</div></div>
+  <h3>1. Data Preprocessing 🔄</h3>
+  <h4>1.a. Loading the Dataset</h4>
+  <p>We begin by loading the Adult Income dataset. This dataset contains various demographic and employment-related features such as age, education, occupation, and other socio-economic factors that might influence an individual's income level.</p>
+  <ul>
+    <li>Numerical attributes: age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week</li>
+    <li>Categorical attributes: workclass, education, marital-status, occupation, relationship, race, sex, native-country</li>
+  </ul>
+  <div class="notebook-code-block"><pre><code># Import necessary libraries
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
 
-{{ ... }}
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Configure visualization settings
+plt.style.use('default')  # Use default matplotlib style
+sns.set_theme()  # Set seaborn theme
+%matplotlib inline
+</code></pre></div>
+  <div class="notebook-code-block"><pre><code># Define column names
+columns = [
+    'age', 'workclass', 'fnlwgt', 'education', 'education-num',
+    'marital-status', 'occupation', 'relationship', 'race', 'sex',
+    'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'income'
+]
+
+# Load the dataset
+df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data',
+                 names=columns, skipinitialspace=True)
+
+# Display the first few rows and basic information
+print("Dataset Shape:", df.shape)
+print("\nFirst few rows of the dataset:")
+df.head()
+</code></pre></div>
+  <div class="notebook-output">Dataset Shape: (32561, 15)<br>First few rows of the dataset:</div>
+  <div class="notebook-table">
+    <table>
+      <thead>
+        <tr>
+          <th>age</th><th>workclass</th><th>fnlwgt</th><th>education</th><th>education-num</th><th>marital-status</th><th>occupation</th><th>relationship</th><th>race</th><th>sex</th><th>capital-gain</th><th>capital-loss</th><th>hours-per-week</th><th>native-country</th><th>income</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>39</td><td>State-gov</td><td>77516</td><td>Bachelors</td><td>13</td><td>Never-married</td><td>Adm-clerical</td><td>Not-in-family</td><td>White</td><td>Male</td><td>2174</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
+        <tr><td>50</td><td>Self-emp-not-inc</td><td>83311</td><td>Bachelors</td><td>13</td><td>Married-civ-spouse</td><td>Exec-managerial</td><td>Husband</td><td>White</td><td>Male</td><td>0</td><td>0</td><td>13</td><td>United-States</td><td>&lt;=50K</td></tr>
+        <tr><td>38</td><td>Private</td><td>215646</td><td>HS-grad</td><td>9</td><td>Divorced</td><td>Handlers-cleaners</td><td>Not-in-family</td><td>White</td><td>Male</td><td>0</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
+        <tr><td>53</td><td>Private</td><td>234721</td><td>11th</td><td>7</td><td>Married-civ-spouse</td><td>Handlers-cleaners</td><td>Husband</td><td>Black</td><td>Male</td><td>0</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
+        <tr><td>28</td><td>Private</td><td>338409</td><td>Bachelors</td><td>13</td><td>Married-civ-spouse</td><td>Prof-specialty</td><td>Wife</td><td>Black</td><td>Female</td><td>0</td><td>0</td><td>40</td><td>Cuba</td><td>&lt;=50K</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="notebook-markdown">
+    <h4>1.b. Exploratory Data Analysis (EDA)</h4>
+    <p>Let's perform a comprehensive analysis of our dataset to understand:</p>
+    <ul>
+      <li>Data types of each feature</li>
+      <li>Missing values</li>
+      <li>Basic statistics of numerical columns</li>
+      <li>Distribution of categorical variables</li>
+    </ul>
+  </div>
+  <div class="notebook-code-block"><pre><code># Display basic information about the dataset
+print("Dataset Info:")
+df.info()
+
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+print("\nNumerical Columns Statistics:")
+print(df.describe())
+</code></pre></div>
+  <div class="notebook-output">
+    Dataset Info:<br>
+    &lt;class 'pandas.core.frame.DataFrame'&gt;<br>
+    RangeIndex: 32561 entries, 0 to 32560<br>
+    Data columns (total 15 columns):<br>
+    ...<br>
+    <br>
+    Missing Values:<br>
+    age               0<br>
+    workclass         0<br>
+    ...<br>
+    <br>
+    Numerical Columns Statistics:<br>
+    ...
+  </div>
+  <!-- Additional notebook content, code, outputs, tables, and images would follow here in the same style -->
+</div>
+<!-- Notebook content from lalitnayyar_assignment9.ipynb ends here -->
+</div>
+</body>
+</html>

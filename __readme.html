@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<h1
+id="iimk-professional-certificate-in-data-science-and-ai-for-managers">🎓
+IIMK Professional Certificate in Data Science and AI for Managers</h1>
+<h2
+id="assignment-9.1-advanced-income-prediction-with-feature-engineering">📊
+Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
+<h3 id="student-information">👨‍🎓 Student Information:</h3>
+<ul>
+<li><strong>Name:</strong> Lalit Nayyar</li>
+<li><strong>Email:</strong> lalitnayyar@gmail.com</li>
+<li><strong>Course:</strong> Professional Certificate in Data Science
+and Artificial Intelligence for Managers</li>
+<li><strong>Institution:</strong> Indian Institute of Management
+Kozhikode (IIMK)</li>
+<li><strong>Submission Date:</strong> June 5, 2025</li>
+</ul>
+<h2 id="assignment-overview">🌟 Assignment Overview</h2>
+<p>This project showcases advanced machine learning techniques for
+income prediction using the Adult Income Dataset. The implementation
+focuses on sophisticated feature engineering, model development, and
+comprehensive analysis.</p>
+<h3 id="key-objectives">🎯 Key Objectives</h3>
+<ol type="1">
+<li>🔍 Implement advanced feature engineering techniques</li>
+<li>📊 Develop robust classification models</li>
+<li>📈 Analyze model performance with multiple metrics</li>
+<li>📝 Create a professional data science report</li>
+</ol>
+<h2 id="assignment-overview-1">📋 Assignment Overview</h2>
+<p>🔍 This project implements supervised learning techniques to predict
+income levels using the Adult Income Dataset. The assignment focuses on
+understanding classification models, their performance metrics, and data
+preprocessing techniques.</p>
+<h3 id="learning-objectives">🎯 Learning Objectives</h3>
+<ol type="1">
+<li>📚 Detail the Supervised Learning process</li>
+<li>📈 Evaluate classifiers based on specific performance metrics</li>
+<li>🤖 Perform comprehensive data preprocessing and feature
+engineering</li>
+<li>📊 Create a professional data science report</li>
+</ol>
+<h2 id="user-guide">📖 User Guide</h2>
+<h3 id="quick-start">🚀 Quick Start</h3>
+<ol type="1">
+<li><strong>Environment Setup</strong></li>
+</ol>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv venv</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\v</span>env<span class="dt">\S</span>cripts<span class="dt">\a</span>ctivate  <span class="co"># Windows</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code></pre></div>
+<ol start="2" type="1">
+<li><strong>Launch Notebook</strong></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook lalitnayyar_assignment9.ipynb</span></code></pre></div>
+<h3 id="notebook-navigation">📓 Notebook Navigation</h3>
+<ol type="1">
+<li>📥 <strong>Data Loading &amp; Exploration</strong>
+<ul>
+<li>Dataset overview</li>
+<li>Initial statistics</li>
+<li>Data quality checks</li>
+</ul></li>
+<li>⚡ <strong>Feature Engineering</strong>
+<ul>
+<li>Age grouping</li>
+<li>Income ratios calculation</li>
+<li>Work-life balance indicators</li>
+<li>Feature distribution analysis</li>
+</ul></li>
+<li>🤖 <strong>Model Development</strong>
+<ul>
+<li>Data preprocessing</li>
+<li>Model training</li>
+<li>Performance evaluation</li>
+</ul></li>
+<li>📊 <strong>Results &amp; Analysis</strong>
+<ul>
+<li>Visualization of results</li>
+<li>Performance metrics</li>
+<li>Feature importance analysis</li>
+</ul></li>
+</ol>
+<h2 id="project-structure-code-organization">📁 Project Structure &amp;
+Code Organization</h2>
+<h3 id="core-files">📌 Core Files</h3>
+<ul>
+<li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission
+notebook</li>
+<li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering
+module</li>
+<li>📊 <code>data_loader.py</code>: Data handling utilities</li>
+<li>📝 <code>requirements.txt</code>: Project dependencies</li>
+<li>📘 <code>README.md</code>: Project documentation</li>
+<li>📄 <code>combined_submission.md</code>: Combined markdown version of
+submission</li>
+<li>📄 <code>notebook_feature_engineering.txt</code>: Notebook feature
+engineering notes</li>
+<li>📄 <code>notebook_header.md</code>: Notebook header markdown</li>
+<li>📄 <code>convert_readme.py</code>: Script to convert README</li>
+<li>📄 <code>download_data.py</code>: Data download script</li>
+<li>📄 <code>setup_code.py</code>: Project setup script</li>
+<li>📄 <code>feature_distributions.png</code>: Feature distribution
+image</li>
+<li>📄 <code>feature_distributions.b64.txt</code>: Base64-encoded
+feature image</li>
+<li>📄 <code>lalitnayyar_assignment9.pdf</code>: Exported PDF of
+notebook</li>
+<li>📁 <code>data/</code>: Data directory</li>
+<li>📁 <code>lalitnayyar_assignment9_md_files/</code>: Supporting
+notebook files</li>
+</ul>
+<h3 id="supporting-modules">🔧 Supporting Modules</h3>
+<ol type="1">
+<li><strong>Feature Engineering Module</strong>
+(<code>feature_engineering.py</code>)
+<ul>
+<li><code>create_age_groups()</code>: Age categorization</li>
+<li><code>create_income_ratios()</code>: Financial feature creation</li>
+<li><code>create_work_life_indicators()</code>: Work pattern
+analysis</li>
+<li><code>plot_feature_distributions()</code>: Visualization
+functions</li>
+</ul></li>
+<li><strong>Data Loading Module</strong> (<code>data_loader.py</code>)
+<ul>
+<li>Dataset download functionality</li>
+<li>Initial preprocessing</li>
+<li>Data validation checks</li>
+</ul></li>
+</ol>
+<h3 id="core-files-1">Core Files</h3>
+<ul>
+<li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission
+notebook</li>
+<li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering
+module</li>
+<li>📊 <code>data_loader.py</code>: Data handling utilities</li>
+<li>📝 <code>requirements.txt</code>: Project dependencies</li>
+<li>📘 <code>README.md</code>: Project documentation</li>
+<li>📄 <code>combined_submission.md</code>: Combined markdown version of
+submission</li>
+<li>📄 <code>notebook_feature_engineering.txt</code>: Notebook feature
+engineering notes</li>
+<li>📄 <code>notebook_header.md</code>: Notebook header markdown</li>
+<li>📄 <code>convert_readme.py</code>: Script to convert README</li>
+<li>📄 <code>download_data.py</code>: Data download script</li>
+<li>📄 <code>setup_code.py</code>: Project setup script</li>
+<li>📄 <code>feature_distributions.png</code>: Feature distribution
+image</li>
+<li>📄 <code>feature_distributions.b64.txt</code>: Base64-encoded
+feature image</li>
+<li>📄 <code>lalitnayyar_assignment9.pdf</code>: Exported PDF of
+notebook</li>
+<li>📁 <code>data/</code>: Data directory</li>
+<li>📁 <code>lalitnayyar_assignment9_md_files/</code>: Supporting
+notebook files</li>
+</ul>
+<h3 id="notebook-sections">Notebook Sections</h3>
+<ol type="1">
+<li><strong>Data Preprocessing</strong> 🔄
+<ul>
+<li>Dataset loading and initial exploration</li>
+<li>Missing value analysis and handling</li>
+<li>Exploratory Data Analysis (EDA)</li>
+</ul></li>
+<li><strong>Data Encoding</strong> 🔢
+<ul>
+<li>Categorical variable conversion</li>
+<li>Label and One-hot encoding implementation</li>
+<li>Data interpretability preservation</li>
+</ul></li>
+<li><strong>Feature Selection and Engineering</strong> 🔍
+<ul>
+<li>Correlation analysis</li>
+<li>Feature importance evaluation</li>
+<li>New feature creation</li>
+</ul></li>
+</ol>
+<h2 id="technical-requirements-setup">🛠️ Technical Requirements &amp;
+Setup</h2>
+<h3 id="system-requirements">💻 System Requirements</h3>
+<ul>
+<li>🐍 Python 3.8+</li>
+<li>🧮 8GB RAM recommended</li>
+<li>💾 2GB free disk space</li>
+<li>📊 Jupyter Notebook environment</li>
+</ul>
+<h3 id="key-dependencies">📦 Key Dependencies</h3>
+<pre><code>pandas&gt;=1.3.0
+numpy&gt;=1.20.0
+scikit-learn&gt;=0.24.0
+matplotlib&gt;=3.4.0
+seaborn&gt;=0.11.0
+jupyter&gt;=1.0.0</code></pre>
+<h3 id="configuration">⚙️ Configuration</h3>
+<ul>
+<li>All paths are relative to project root</li>
+<li>Data is automatically downloaded</li>
+<li>Visualizations are saved in project directory</li>
+</ul>
+<h3 id="dependencies">Dependencies</h3>
+<ul>
+<li>Python &gt;= 3.8</li>
+<li>pandas &gt;= 1.3.0</li>
+<li>numpy &gt;= 1.20.0</li>
+<li>matplotlib &gt;= 3.4.0</li>
+<li>seaborn &gt;= 0.11.0</li>
+<li>scikit-learn &gt;= 0.24.0</li>
+<li>jupyter &gt;= 1.0.0</li>
+</ul>
+<h3 id="dataset">Dataset</h3>
+<p>The Adult Income Dataset is automatically downloaded from the UCI
+Machine Learning Repository when running the notebook. No manual
+download is required.</p>
+<h2 id="notebook-structure-documentation">📊 Notebook Structure &amp;
+Documentation</h2>
+<h3 id="main-sections">📑 Main Sections</h3>
+<ol type="1">
+<li><strong>📋 Introduction &amp; Setup</strong>
+<ul>
+<li>Project overview</li>
+<li>Library imports</li>
+<li>Configuration setup</li>
+</ul></li>
+<li><strong>🔍 Data Exploration</strong>
+<ul>
+<li>Dataset characteristics</li>
+<li>Statistical analysis</li>
+<li>Data quality assessment</li>
+</ul></li>
+<li><strong>⚡ Feature Engineering</strong>
+<ul>
+<li>Age-based features</li>
+<li>Income ratio calculations</li>
+<li>Work pattern indicators</li>
+<li>Distribution analysis</li>
+</ul></li>
+<li><strong>🤖 Model Development</strong>
+<ul>
+<li>Data preprocessing</li>
+<li>Model selection</li>
+<li>Training pipeline</li>
+<li>Hyperparameter tuning</li>
+</ul></li>
+<li><strong>📈 Results &amp; Analysis</strong>
+<ul>
+<li>Performance metrics</li>
+<li>Feature importance</li>
+<li>Visual analysis</li>
+<li>Conclusions</li>
+</ul></li>
+</ol>
+<h3 id="documentation-standards">📝 Documentation Standards</h3>
+<ul>
+<li>Detailed markdown explanations</li>
+<li>Code comments</li>
+<li>Visual result interpretation</li>
+<li>Implementation justifications</li>
+</ul>
+<p>The notebook is structured as a professional data science report
+with: 1. Clear section headers and documentation 2. Detailed
+explanations and justifications 3. Visualizations and statistical
+analysis 4. Code comments and implementation details</p>
+<h2 id="key-features">🔍 Key Features</h2>
+<ul>
+<li>Comprehensive data preprocessing pipeline</li>
+<li>Advanced feature engineering techniques</li>
+<li>Detailed correlation analysis</li>
+<li>Professional report formatting</li>
+<li>Reproducible code structure</li>
+</ul>
+<h3 id="system-requirements-1">💻 System Requirements</h3>
+<ul>
+<li>🐍 Python 3.8 or higher</li>
+<li>📔 Jupyter Notebook</li>
+<li>🧮 4GB RAM minimum</li>
+<li>💾 1GB free disk space</li>
+</ul>
+<h3 id="installation-steps">🔧 Installation Steps</h3>
+<ol type="1">
+<li><p>Clone or download this repository</p></li>
+<li><p>Create a virtual environment (recommended):</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv venv</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">.</span><span class="dt">\v</span>env<span class="dt">\S</span>cripts<span class="dt">\a</span>ctivate  <span class="co"># On Windows</span></span></code></pre></div></li>
+<li><p>Install dependencies</p></li>
+<li><p>Run the data download script</p></li>
+<li><p>Launch Jupyter Notebook</p></li>
+</ol>
+<h3 id="troubleshooting">⚠️ Troubleshooting</h3>
+<ul>
+<li>🔍 If the automatic data download fails, use the manual Kaggle
+download option</li>
+<li>🔄 For package conflicts, try creating a fresh virtual
+environment</li>
+<li>✅ Check Python version compatibility if encountering errors</li>
+</ul>
+<h2 id="technical-details">🔬 Technical Details</h2>
+<h3 id="data-processing-pipeline">🔄 Data Processing Pipeline</h3>
+<ol type="1">
+<li>📥 Data acquisition from UCI repository</li>
+<li>🧹 Preprocessing and cleaning</li>
+<li>⚡ Feature engineering</li>
+<li>🎯 Model training and evaluation</li>
+</ol>
+<h3 id="models-implemented">🤖 Models Implemented</h3>
+<ol type="1">
+<li>Support Vector Machine (SVM)
+<ul>
+<li>Kernel: RBF</li>
+<li>Standardized features</li>
+<li>Cross-validation</li>
+</ul></li>
+<li>Naïve Bayes
+<ul>
+<li>Gaussian NB implementation</li>
+<li>Probability-based classification</li>
+</ul></li>
+</ol>
+<h3 id="performance-metrics">📊 Performance Metrics</h3>
+<ul>
+<li>🎯 Accuracy</li>
+<li>📈 Precision</li>
+<li>📉 Recall</li>
+<li>⭐ F1-Score</li>
+<li>🔄 Confusion Matrix</li>
+</ul>
+<h2 id="assignment-submission-guidelines">📝 Assignment Submission
+Guidelines</h2>
+<h3 id="submission-components">🎯 Submission Components</h3>
+<ol type="1">
+<li><strong>Main Notebook</strong>
+(<code>lalitnayyar_assignment9.ipynb</code>)
+<ul>
+<li>✅ All cells executed in order</li>
+<li>✅ Output cells preserved</li>
+<li>✅ Visualizations properly rendered</li>
+<li>✅ Markdown documentation complete</li>
+</ul></li>
+<li><strong>Supporting Files</strong>
+<ul>
+<li>✅ <code>feature_engineering.py</code></li>
+<li>✅ <code>data_loader.py</code></li>
+<li>✅ <code>requirements.txt</code></li>
+<li>✅ Generated visualizations</li>
+</ul></li>
+</ol>
+<h3 id="quality-checklist">🔍 Quality Checklist</h3>
+<ul>
+<li>✓ Code follows PEP 8 standards</li>
+<li>✓ All visualizations are properly labeled</li>
+<li>✓ Results are thoroughly explained</li>
+<li>✓ Feature engineering steps documented</li>
+<li>✓ Performance metrics analyzed</li>
+</ul>
+<h3 id="submission-process">📤 Submission Process</h3>
+<ol type="1">
+<li>Verify all cells are executed</li>
+<li>Ensure all outputs are saved</li>
+<li>Check visualization quality</li>
+<li>Validate documentation completeness</li>
+<li>Submit complete project folder</li>
+</ol>
+<h2 id="support-contact">🤝 Support &amp; Contact</h2>
+<p>For any queries regarding this submission: - 📧 Email:
+lalitnayyar@gmail.com - 🎓 Course: IIMK Professional Certificate in Data
+Science - 📅 Batch: 2025 1. Complete all notebook cells 2. Ensure all
+visualizations are properly rendered 3. Include analysis and
+interpretations 4. Submit the entire project folder</p>
+<h2 id="detailed-code-description">Detailed Code Description</h2>
+<h3 id="data-download-module-download_data.py">1. Data Download Module
+(<code>download_data.py</code>)</h3>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> download_adult_dataset():</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Downloads data from UCI repository</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Processes and combines train/test data</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Saves to data/adult.csv</span></span></code></pre></div>
+<ul>
+<li>Handles automatic data download from UCI repository</li>
+<li>Processes both training and test datasets</li>
+<li>Performs initial data cleaning</li>
+<li>Creates unified CSV file</li>
+</ul>
+<h3 id="main-notebook-components-income_prediction.ipynb">2. Main
+Notebook Components (<code>income_prediction.ipynb</code>)</h3>
+<h4 id="data-preprocessing">Data Preprocessing</h4>
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> preprocess_data(df):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Handles missing values</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Encodes categorical variables</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Scales numerical features</span></span></code></pre></div>
+<ul>
+<li>Missing value imputation</li>
+<li>Categorical variable encoding</li>
+<li>Feature scaling</li>
+<li>Data type conversions</li>
+</ul>
+<h4 id="feature-engineering">Feature Engineering</h4>
+<ul>
+<li>Creation of derived features</li>
+<li>One-hot encoding for categorical variables</li>
+<li>Feature selection based on correlation analysis</li>
+<li>Handling of outliers</li>
+</ul>
+<h4 id="model-implementation">Model Implementation</h4>
+<ol type="1">
+<li><strong>SVM Classifier</strong></li>
+</ol>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>svm_classifier <span class="op">=</span> SVC(kernel<span class="op">=</span><span class="st">&#39;rbf&#39;</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code></pre></div>
+<ul>
+<li>RBF kernel implementation</li>
+<li>Hyperparameter tuning</li>
+<li>Cross-validation setup</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Naïve Bayes Classifier</strong></li>
+</ol>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nb_classifier <span class="op">=</span> GaussianNB()</span></code></pre></div>
+<ul>
+<li>Gaussian probability distribution</li>
+<li>Prior probability calculation</li>
+<li>Feature independence assumption</li>
+</ul>
+<h4 id="performance-evaluation">Performance Evaluation</h4>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> evaluate_model(y_true, y_pred):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculates accuracy, precision, recall</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Generates confusion matrix</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Creates visualization plots</span></span></code></pre></div>
+<ul>
+<li>Comprehensive metrics calculation</li>
+<li>Visual performance analysis</li>
+<li>Model comparison tools</li>
+</ul>
+<h3 id="visualization-components">3. Visualization Components</h3>
+<ul>
+<li>Distribution plots for features</li>
+<li>Correlation heatmaps</li>
+<li>ROC curves</li>
+<li>Confusion matrices</li>
+<li>Performance comparison charts</li>
+</ul>
+<h3 id="helper-functions">4. Helper Functions</h3>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Data validation</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> validate_data(df):</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Checks data integrity</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Validates data types</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensures consistent formatting</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Feature importance</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_feature_importance(model, X):</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculates feature importance</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ranks features by impact</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Visualizes importance scores</span></span></code></pre></div>
+<h2 id="version-information">Version Information</h2>
+<p>v1.0.0 - Initial release for IIMK Assignment 9.1</p>
+</body>
+</html>
