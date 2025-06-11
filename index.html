@@ -1,377 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IIMK Assignment 9.1 Submission</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
-      background: linear-gradient(135deg, #e3f0ff 0%, #b3d8ff 100%);
-      margin: 0;
-      color: #1a237e;
-    }
-    .container {
-      max-width: 900px;
-      margin: 40px auto 40px auto;
-      background: #fff;
-      border-radius: 18px;
-      box-shadow: 0 4px 24px rgba(30, 64, 175, 0.10);
-      padding: 40px 32px 32px 32px;
-      border: 1.5px solid #90caf9;
-    }
-    h1, h2, h3, h4 {
-      color: #1976d2;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-      font-weight: 700;
-    }
-    h1 {
-      font-size: 2.2em;
-      border-bottom: 2px solid #1976d2;
-      padding-bottom: 0.2em;
-      margin-bottom: 0.7em;
-    }
-    h2 {
-      font-size: 1.5em;
-      border-left: 6px solid #64b5f6;
-      padding-left: 12px;
-      background: #e3f2fd;
-      border-radius: 6px;
-    }
-    h3 {
-      font-size: 1.2em;
-      color: #1565c0;
-    }
-    ul, ol {
-      padding-left: 1.4em;
-      margin-bottom: 1em;
-    }
-    li {
-      margin-bottom: 0.4em;
-    }
-    strong {
-      color: #0d47a1;
-    }
-    code, pre {
-      background: #e3f2fd;
-      color: #0d47a1;
-      border-radius: 6px;
-      padding: 0.2em 0.5em;
-      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-      font-size: 1em;
-    }
-    pre {
-      padding: 1em;
-      overflow-x: auto;
-      margin: 1em 0;
-      background: #e3f0ff;
-      border-left: 4px solid #1976d2;
-    }
-    .sourceCode {
-      background: #e3f0ff !important;
-      border-left: 4px solid #1976d2;
-      padding: 1em;
-      border-radius: 8px;
-      margin: 1em 0;
-      overflow-x: auto;
-    }
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      background: #fafcff;
-      margin: 1.5em 0;
-      font-size: 0.95em;
-    }
-    th, td {
-      border: 1px solid #bbdefb;
-      padding: 0.6em 1em;
-      text-align: left;
-    }
-    th {
-      background: #90caf9;
-      color: #0d47a1;
-    }
-    tr:nth-child(even) {
-      background: #e3f2fd;
-    }
-    blockquote {
-      border-left: 5px solid #2196f3;
-      margin: 1.5em 0;
-      padding: 0.8em 1.2em;
-      background: #f1f8ff;
-      color: #1565c0;
-      border-radius: 8px;
-    }
-    img, .viz-img {
-      max-width: 90%;
-      height: auto;
-      display: block;
-      margin: 2em auto;
-      border-radius: 12px;
-      border: 3px solid #90caf9;
-      box-shadow: 0 2px 12px #1976d230;
-      background: #fff;
-    }
-    .viz-caption {
-      text-align: center;
-      color: #1565c0;
-      font-size: 1.05em;
-      margin-top: 0.25em;
-      font-style: italic;
-    }
-    .notebook-output {
-      background: #f5f7fa;
-      color: #263238;
-      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
-      font-size: 1.05em;
-      padding: 1em 1.3em;
-      margin: 0 0 1.5em 0;
-      border-radius: 8px;
-      text-align: left;
-      box-shadow: none;
-      border: none;
-      white-space: pre-line;
-      line-height: 1.6;
-    }
-    .notebook-code-editor {
-      background: #e3eafc !important;
-      color: #21243b !important;
-      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace !important;
-      font-size: 1.07em;
-      padding: 1.1em 1.3em !important;
-      border-radius: 9px !important;
-      box-shadow: none !important;
-      text-align: left !important;
-      margin: 0 0 1.5em 0 !important;
-      line-height: 1.6;
-      border-left: 5px solid #1976d2;
-      border: none;
-    }
-    @media (max-width: 600px) {
-      .container {
-        padding: 12px 2vw;
-      }
-      pre, .sourceCode {
-        font-size: 0.9em;
-        padding: 0.5em;
-      }
-      img, .viz-img {
-        max-width: 100%;
-      }
-      table {
-        font-size: 0.85em;
-      }
-    }
-    @page {
-      size: A4;
-      margin: 1.5cm 1.2cm 1.5cm 1.2cm;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIMK Professional Certificate - Assignment 9.1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #e0e7ef 0%, #f8fafc 100%);
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            color: #1a2233;
+        }
+        .container {
+            max-width: 720px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(44, 62, 80, 0.13);
+            padding: 40px 44px 36px 44px;
+        }
+        .header h1 {
+            font-size: 2.3rem;
+            margin: 0 0 10px 0;
+            color: #2b3a67;
+            font-weight: 700;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+        }
+        .header h1 span {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        .header h2 {
+            font-size: 1.35rem;
+            margin: 0 0 12px 0;
+            color: #3e4a5e;
+            font-weight: 500;
+        }
+        .student-info {
+            background: #f3f8fc;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin-bottom: 26px;
+            font-size: 1.1rem;
+        }
+        .student-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .student-info li {
+            margin-bottom: 7px;
+            display: flex;
+            align-items: center;
+        }
+        .student-info li strong {
+            width: 130px;
+            color: #2b3a67;
+            font-weight: 700;
+            margin-right: 10px;
+        }
+        .links {
+            margin-top: 36px;
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+        }
+        .project-link {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(90deg, #3e4a5e 0%, #2b3a67 100%);
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.18rem;
+            font-weight: 600;
+            padding: 18px 28px;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.09);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .project-link:hover {
+            background: linear-gradient(90deg, #2b3a67 0%, #3e4a5e 100%);
+            transform: translateY(-2px) scale(1.03);
+        }
+        .project-link span {
+            margin-right: 14px;
+            font-size: 1.5rem;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 18px 6px;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .header h2 {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<!-- README content -->
-<h1>🎓 IIMK Professional Certificate in Data Science and AI for Managers</h1>
-<h2>📊 Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
-<h3>👨‍🎓 Student Information:</h3>
-<ul>
-  <li><strong>Name:</strong> Lalit Nayyar</li>
-  <li><strong>Email:</strong> lalitnayyar@gmail.com</li>
-  <li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
-  <li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
-  <li><strong>Submission Date:</strong> June 5, 2025</li>
-</ul>
-<h2>🌟 Assignment Overview</h2>
-<p>This project showcases advanced machine learning techniques for income prediction using the Adult Income Dataset. The implementation focuses on sophisticated feature engineering, model development, and comprehensive analysis.</p>
-<h3>🎯 Key Objectives</h3>
-<ol>
-  <li>🔍 Implement advanced feature engineering techniques</li>
-  <li>📊 Develop robust classification models</li>
-  <li>📈 Analyze model performance with multiple metrics</li>
-  <li>📝 Create a professional data science report</li>
-</ol>
-<h2>📋 Assignment Overview</h2>
-<p>🔍 This project implements supervised learning techniques to predict income levels using the Adult Income Dataset. The assignment focuses on understanding classification models, their performance metrics, and data preprocessing techniques.</p>
-<h3>🎯 Learning Objectives</h3>
-<ol>
-  <li>📚 Detail the Supervised Learning process</li>
-  <li>📈 Evaluate classifiers based on specific performance metrics</li>
-  <li>🤖 Perform comprehensive data preprocessing and feature engineering</li>
-  <li>📊 Create a professional data science report</li>
-</ol>
-<h2>📖 User Guide</h2>
-<h3>🚀 Quick Start</h3>
-<ol>
-  <li><strong>Environment Setup</strong></li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode bash">python -m venv venv
-.\venv\Scripts\activate  # Windows
-pip install -r requirements.txt</pre></div>
-<ol start="2">
-  <li><strong>Launch Notebook</strong></li>
-</ol>
-<div class="sourceCode"><pre class="sourceCode bash">jupyter notebook lalitnayyar_assignment9.ipynb</pre></div>
-<h3>📓 Notebook Navigation</h3>
-<ol>
-  <li>📥 <strong>Data Loading & Exploration</strong>
-    <ul>
-      <li>Dataset overview</li>
-      <li>Initial statistics</li>
-      <li>Data quality checks</li>
-    </ul>
-  </li>
-  <li>⚡ <strong>Feature Engineering</strong>
-    <ul>
-      <li>Age grouping</li>
-      <li>Income ratios calculation</li>
-      <li>Work-life balance indicators</li>
-      <li>Feature distribution analysis</li>
-    </ul>
-  </li>
-  <li>🤖 <strong>Model Development</strong>
-    <ul>
-      <li>Data preprocessing</li>
-      <li>Model training</li>
-      <li>Performance evaluation</li>
-    </ul>
-  </li>
-  <li>📊 <strong>Results & Analysis</strong>
-    <ul>
-      <li>Visualization of results</li>
-      <li>Performance metrics</li>
-      <li>Feature importance analysis</li>
-    </ul>
-  </li>
-</ol>
-<h2>📁 Project Structure & Code Organization</h2>
-<ul>
-  <li>📔 <code>lalitnayyar_assignment9.ipynb</code>: Main submission notebook</li>
-  <li>🛠️ <code>feature_engineering.py</code>: Custom feature engineering module</li>
-  <li>📊 <code>data_loader.py</code>: Data handling utilities</li>
-  <li>📝 <code>requirements.txt</code>: Project dependencies</li>
-  <li>📘 <code>README.md</code>: Project documentation</li>
-  <li>📄 <code>combined_submission.md</code>: Combined markdown version of submission</li>
-  <li>📄 <code>notebook_feature_engineering.txt</code>: Notebook feature engineering notes</li>
-  <li>📄 <code>notebook_header.md</code>: Notebook header markdown</li>
-  <li>📄 <code>convert_readme.py</code>: Script to convert README</li>
-  <li>📄 <code>download_data.py</code>: Data download script</li>
-  <li>📄 <code>setup_code.py</code>: Project setup script</li>
-  <li>📄 <code>feature_distributions.png</code>: Feature distribution image</li>
-  <li>📄 <code>feature_distributions.b64.txt</code>: Base64-encoded feature image</li>
-  <li>📄 <code>lalitnayyar_assignment9.pdf</code>: Exported PDF of notebook</li>
-  <li>📁 <code>data/</code>: Data directory</li>
-  <li>📁 <code>lalitnayyar_assignment9_md_files/</code>: Supporting notebook files</li>
-</ul>
-<!-- Notebook content from lalitnayyar_assignment9.ipynb starts here -->
-<div class="notebook-section">
-  <h2>📊 Assignment 9.1: Supervised Learning and Classification Models</h2>
-  <h3>👨‍🎓 Student Information:</h3>
-  <ul>
-    <li><strong>Name:</strong> Lalit Nayyar</li>
-    <li><strong>Email:</strong> lalitnayyar@gmail.com</li>
-    <li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
-    <li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
-  </ul>
-  <h3>📋 Assignment Overview</h3>
-  <p>🔍 This project implements supervised learning techniques to predict income levels using the Adult Income Dataset. The assignment focuses on understanding classification models, their performance metrics, and data preprocessing techniques.</p>
-  <h4>Dataset Description</h4>
-  <p>The Adult Income Dataset, also known as the Census Income dataset, contains demographic and employment-related features to predict whether an individual's annual income exceeds $50,000. This real-world dataset presents various data preprocessing and modeling challenges that are common in practical machine learning applications.</p>
-
-  <h3>1. Data Preprocessing 🔄</h3>
-  <h4>1.a. Loading the Dataset</h4>
-  <p>We begin by loading the Adult Income dataset. This dataset contains various demographic and employment-related features such as age, education, occupation, and other socio-economic factors that might influence an individual's income level.</p>
-  <ul>
-    <li>Numerical attributes: age, fnlwgt, education-num, capital-gain, capital-loss, hours-per-week</li>
-    <li>Categorical attributes: workclass, education, marital-status, occupation, relationship, race, sex, native-country</li>
-  </ul>
-  <div class="notebook-code-block"><pre><code># Import necessary libraries
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-
-# Set random seed for reproducibility
-np.random.seed(42)
-
-# Configure visualization settings
-plt.style.use('default')  # Use default matplotlib style
-sns.set_theme()  # Set seaborn theme
-%matplotlib inline
-</code></pre></div>
-  <div class="notebook-code-block"><pre><code># Define column names
-columns = [
-    'age', 'workclass', 'fnlwgt', 'education', 'education-num',
-    'marital-status', 'occupation', 'relationship', 'race', 'sex',
-    'capital-gain', 'capital-loss', 'hours-per-week', 'native-country', 'income'
-]
-
-# Load the dataset
-df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data',
-                 names=columns, skipinitialspace=True)
-
-# Display the first few rows and basic information
-print("Dataset Shape:", df.shape)
-print("\nFirst few rows of the dataset:")
-df.head()
-</code></pre></div>
-  <div class="notebook-output">Dataset Shape: (32561, 15)<br>First few rows of the dataset:</div>
-  <div class="notebook-table">
-    <table>
-      <thead>
-        <tr>
-          <th>age</th><th>workclass</th><th>fnlwgt</th><th>education</th><th>education-num</th><th>marital-status</th><th>occupation</th><th>relationship</th><th>race</th><th>sex</th><th>capital-gain</th><th>capital-loss</th><th>hours-per-week</th><th>native-country</th><th>income</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>39</td><td>State-gov</td><td>77516</td><td>Bachelors</td><td>13</td><td>Never-married</td><td>Adm-clerical</td><td>Not-in-family</td><td>White</td><td>Male</td><td>2174</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
-        <tr><td>50</td><td>Self-emp-not-inc</td><td>83311</td><td>Bachelors</td><td>13</td><td>Married-civ-spouse</td><td>Exec-managerial</td><td>Husband</td><td>White</td><td>Male</td><td>0</td><td>0</td><td>13</td><td>United-States</td><td>&lt;=50K</td></tr>
-        <tr><td>38</td><td>Private</td><td>215646</td><td>HS-grad</td><td>9</td><td>Divorced</td><td>Handlers-cleaners</td><td>Not-in-family</td><td>White</td><td>Male</td><td>0</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
-        <tr><td>53</td><td>Private</td><td>234721</td><td>11th</td><td>7</td><td>Married-civ-spouse</td><td>Handlers-cleaners</td><td>Husband</td><td>Black</td><td>Male</td><td>0</td><td>0</td><td>40</td><td>United-States</td><td>&lt;=50K</td></tr>
-        <tr><td>28</td><td>Private</td><td>338409</td><td>Bachelors</td><td>13</td><td>Married-civ-spouse</td><td>Prof-specialty</td><td>Wife</td><td>Black</td><td>Female</td><td>0</td><td>0</td><td>40</td><td>Cuba</td><td>&lt;=50K</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="notebook-markdown">
-    <h4>1.b. Exploratory Data Analysis (EDA)</h4>
-    <p>Let's perform a comprehensive analysis of our dataset to understand:</p>
-    <ul>
-      <li>Data types of each feature</li>
-      <li>Missing values</li>
-      <li>Basic statistics of numerical columns</li>
-      <li>Distribution of categorical variables</li>
-    </ul>
-  </div>
-  <div class="notebook-code-block"><pre><code># Display basic information about the dataset
-print("Dataset Info:")
-df.info()
-
-print("\nMissing Values:")
-print(df.isnull().sum())
-
-print("\nNumerical Columns Statistics:")
-print(df.describe())
-</code></pre></div>
-  <div class="notebook-output">
-    Dataset Info:<br>
-    &lt;class 'pandas.core.frame.DataFrame'&gt;<br>
-    RangeIndex: 32561 entries, 0 to 32560<br>
-    Data columns (total 15 columns):<br>
-    ...<br>
-    <br>
-    Missing Values:<br>
-    age               0<br>
-    workclass         0<br>
-    ...<br>
-    <br>
-    Numerical Columns Statistics:<br>
-    ...
-  </div>
-  <!-- Additional notebook content, code, outputs, tables, and images would follow here in the same style -->
-</div>
-<!-- Notebook content from lalitnayyar_assignment9.ipynb ends here -->
-</div>
+    <div class="container">
+        <div class="header">
+            <h1><span>🎓</span> IIMK Professional Certificate in Data Science and AI for Managers</h1>
+            <h2>📊 Assignment 9.1: Advanced Income Prediction with Feature Engineering</h2>
+        </div>
+        <div class="student-info">
+            <ul>
+                <li><strong>Name:</strong> Lalit Nayyar</li>
+                <li><strong>Email:</strong> lalitnayyar@gmail.com</li>
+                <li><strong>Course:</strong> Professional Certificate in Data Science and Artificial Intelligence for Managers</li>
+                <li><strong>Institution:</strong> Indian Institute of Management Kozhikode (IIMK)</li>
+            </ul>
+        </div>
+        <div class="links">
+            <a class="project-link" href="https://lalitnayyar.github.io/iimkassignment9/__notebook.html" target="_blank"><span>📒</span>View Project Notebook</a>
+            <a class="project-link" href="https://lalitnayyar.github.io/iimkassignment9/__readme.html" target="_blank"><span>📄</span>View Project Readme</a>
+        </div>
+    </div>
 </body>
 </html>
